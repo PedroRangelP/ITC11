@@ -1,0 +1,248 @@
+
+/*************************************/
+/*                                   */
+/*            CSS RESET              */
+/*                                   */
+/*************************************/
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*************************************/
+/*                                   */
+/*            MAIN CONTENT           */
+/*                                   */
+/*************************************/
+
+#mainvideo{ 
+    width: 100vw; /* vw = Viewport width */
+    height: 100vh; /* vh = Viewport height */
+}
+
+#mainvideo .video-container{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 2;
+    height: 100vh;
+}
+
+#mainvideo .video-container video{
+    background-size: cover;
+    background-position: 50% 50%;
+    position: absolute;
+    right: -100%;
+    bottom: -100%;
+    top: -100%;
+    left: -100%;
+    margin: auto;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -100;
+}
+
+
+#logo{
+    width: 125px;
+    padding: 20px 0 0 20px;
+}
+
+
+.preorder-button{
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    background-color: #40a9ca;
+    float: right;
+    padding: 10px 44px;
+    margin: 20px 20px 0 0;
+    border-radius: 30px;
+}
+
+#play-video-button{
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+
+/*************************************/
+/*                                   */
+/*          GENERAL STYLES           */
+/*                                   */
+/*************************************/
+
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+section{
+    background-color: white;
+    position: relative;
+    z-index: 3;
+}
+
+.container{
+    z-index: 3;
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.fixed{
+    position: fixed;
+    width: 1200px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.container h1{
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    margin-top: 20vh;
+    margin-left: 20px;
+}
+
+.container h2{
+    font-size: 36px;
+    color: #333;
+}
+
+.container-title{
+    padding-top: 80px;
+    padding-left: 20px;
+}
+
+p{
+    line-height: 30px;
+    font-size: 18px;
+    padding-left: 20px;
+    margin-top: 30px;
+}
+
+p span{
+    font-weight: 700;
+    color: #333;
+}
+
+
+.left-content{
+    display: inline-block;
+    width: 40%;
+}
+
+.right-content{
+    display: inline-block;
+    width: 60%;
+}
+
+.left-content img{
+    max-width: 100%;
+}
+
+
+/*************************************/
+/*                                   */
+/*          TESTIMONIALS             */
+/*                                   */
+/*************************************/
+
+
+.clients{
+     border-bottom: 1px solid #ccc;   
+}
+
+.clients li{
+    display: inline-block;
+    width: 19.7%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/*************************************/
+/*                                   */
+/*            MEET KNOCKI            */
+/*                                   */
+/*************************************/
+
+#product-image{
+    display: inline-block;
+    width: 40%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

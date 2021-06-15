@@ -1,0 +1,177 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    background: #fff;
+    font-family: "Comfortaa", Sans-serif;
+    font-size: 16px;
+    margin:0;
+}
+.container{
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
+/*HEADER*/
+header{
+  background: url('../img/bg2.jpg') #604c8d;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-height: 600px;  
+}
+header .logo{
+    margin: 0;
+    width: 150px;
+    text-align: left;
+}
+header .menu{
+  margin: 40px 0;
+  text-align: right;
+  
+
+}
+header .menu a{
+  margin: 0 20px;
+  color: #fff;
+  padding-bottom: 9px;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  font-size: 1em; 
+}
+header .menu a.active{
+  border-bottom: 2px solid #8FB8DE;
+}
+header .menu a:hover{
+  border-bottom:2px solid #fff;
+}
+header .container-text{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+}
+header .container-text .text{
+  border:2px solid rgba(255,255,255,0.5);
+  border-radius: 3px;
+  display: inline-block;
+  text-align: center;
+  padding: 20px 60px;
+}
+header .container-text .text h1, 
+header .container-text .text h2{
+  color: #fff;
+  font-weight: 300;
+}
+header .container-text .text .team{
+  margin-bottom: 10px;
+  font-size:50px;
+  line-height: 50px;
+}
+header .container-text .text .slogan{
+  font-size: 25px;
+  line-height: 25px;
+}
+
+/*MAIN*/
+.main{
+    margin: 50px 0;   
+}
+.main .container{
+  overflow: visible;
+}
+table {
+    width: 1100px;
+    margin: auto;
+    border-collapse: collapse;
+    font-family: 'Comfortaa', cursive;
+    line-height: 25px;
+}
+
+td, th {
+    text-align: center;
+    border: 2px solid #000;
+    font-size: 12px;
+    padding: 15px;
+}
+
+td.specs {
+    text-align: left;
+}
+
+tr:hover {
+    background-color: #D8D5DB;
+    
+
+}
+th {
+    text-align: center;
+    background-color: #604c8d;
+    color: white;
+    font-size: 14px;
+}
+
+img {
+    width: 220px;
+}
+
+#knocki_specs {
+    width: 300px;
+}
+
+/*Social Media*/
+footer .social {
+  background: #140D4F;
+  padding: 60px 0;
+}
+
+footer .social .container {
+  display: flex;
+  justify-content:center;
+}
+
+footer .social a {
+  color: #fff;
+  text-align: center;
+  width: 180px;
+  display: inline-block;
+  padding: 20px 0;
+  border-radius: 3px;
+  font-size: 50px;
+  margin: 0 20px;
+}
+
+footer .social .twitter:hover { background: #1da1f2; }
+footer .social .facebook:hover { background: #3b5998; }
+footer .social .youtube:hover { background: #cd201f; }
+footer .social .github:hover { background: #666666; }
+footer .social .instagram:hover { background: #3f729b; }
+
+/*Font Awesome Icons*/
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-twitter:before {
+  content: "\f099";
+}
+.fa-facebook:before {
+  content: "\f09a";
+}
+.fa-github:before {
+  content: "\f09b";
+}
+.fa-instagram:before {
+  content: "\f16d";
+}
+.fa-youtube-play:before {
+  content: "\f16a";
+}

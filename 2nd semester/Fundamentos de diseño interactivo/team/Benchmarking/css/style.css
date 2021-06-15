@@ -1,0 +1,30 @@
+body {
+  font-family: 'Comfortaa', cursive;
+}
+
+.bench-wrapper {
+    width: 90%;
+    margin: auto;
+}
+
+.bench-title {
+    font-size: 50px; 
+}
+
+@media screen and (max-width: 800px) {
+    .bench-wrapper {
+    }
+
+    img {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .bench-wrapper {
+    }
+    img {
+        width: 80%;
+    }
+}
+

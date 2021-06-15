@@ -1,0 +1,190 @@
+/* CSS RESET */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* MY STYLES */
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color:#333;
+}
+
+#wrapper{
+    width: 800px;
+    margin: 0 auto;
+}
+
+h1{
+    font-size: 38px;
+    text-align: center;
+    margin: 30px;
+}
+
+h2{
+    font-size: 28px;
+    text-align: center;
+    color: #aaa;
+    margin: 30px 0;
+}
+
+h3{
+    font-size: 20px;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid #ddd;
+    padding: 10px 1%;
+    border-radius: 8px;
+    width: 26%;
+    margin: 2%;
+    cursor: pointer;
+}
+
+#phantom1{
+    border-bottom: 2px solid #ca4456;
+}
+
+#phantom2{
+    border-bottom: 2px solid #e5be81;
+}
+
+#phantom3{
+    border-bottom: 2px solid #cacaca;
+}
+
+#drone img{
+    width: 80%;
+    left: 10%;
+}
+
+#drone{
+    position: relative;
+}
+
+#drone img{
+    width: 90%;
+    margin: 0 auto;
+}
+
+#img-phantom2,
+#img-phantom3,
+#finish{
+    display: none;
+}
+
+#battery-sel{
+    width: 300px;
+    margin: 0 auto;
+    height: 90px;
+}
+
+#less, #more {
+    width: 24%;
+    float: left;
+}
+#less img, #more img{
+    width: 80%;
+    margin: 0 auto;
+    opacity: 0.3;
+    padding-top: 10px;
+    transition: all 0.3s ease;
+}
+
+#less img:hover, #more img:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.battery{
+    width: 30%;
+    float: left;
+}
+
+.battery img{
+    width: 100%;
+}
+
+.number-of-batteries{
+    width: 20%;
+    font-size: 42px;
+    float: left;
+    padding-top: 16px;
+    color: #999;
+    text-align: center;
+}
+
+#buy{
+    width: 60%;
+    margin: 20px auto 0 auto;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 20px 1%;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/*Responsive*/
+@media screen and (max-width: 800px){
+    #wrapper{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h3 {
+        display: block;
+        width: 80%;
+        margin: auto;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+}
+

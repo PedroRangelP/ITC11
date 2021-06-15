@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Interaction Design Fundamentals - 2nd Partial Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Krub:400,700" rel="stylesheet">
+    <link href="css/styles-A.css" rel="stylesheet">
+    <script src="js/jquery-1.12.1.min.js"></script>
+</head>
+
+<body>
+    <link href="https://fonts.googleapis.com/css?family=Krub:400,700" rel="stylesheet">
+
+    <header>
+        <img src="imgA/Logo.png">
+        <img src="imgA/hamburger-menu.png" class="mobile-menu">
+        <ul>
+            <li>NEW CARS AND VANS</li>
+            <li>OFFERS</li>
+            <li>MOTABILITY</li>
+            <li>APPROVED USED CARS & VANS</li>
+            <li>OWNER SERVICES</li>
+            <li>ABOUT CITROËN</li>
+        </ul>
+    </header>
+    <h1>Citroën <span>C3</span></h1>
+    <div class="car-container">
+        <img class='car-red' src="imgA/car-red.png">
+        <img class='car-green' src="imgA/car-green.png">
+        <img class='car-pink' src="imgA/car-pink.png">
+        <img class='car-yellow' src="imgA/car-yellow.png">
+        <img class='car-metalic-green' src="imgA/car-metalic-green.png">
+    </div>
+    <div class="color-selection">
+        <ul>
+            <li class="green">
+                <p>Green</p>
+            </li>
+            <li class="pink">
+                <p>Pink</p>
+            </li>
+            <li class="red">
+                <p>Red</p>
+            </li>
+            <li class="yellow">
+                <p>Yellow</p>
+            </li>
+            <li class="metalic-green">
+                <p>Metalic<br>green</p>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        $('li').on('click', function () {
+            $('.car-container img').css('opacity', '0');
+        });
+
+
+        $('.green').on('click', function () {
+            $('.car-green').css('opacity', '1.0');
+            $('h1 span').css('color', '#25d94c');
+        });
+        $('.pink').on('click', function () {
+            $('.car-pink').css('opacity', '1.0');
+            $('h1 span').css('color', '#da2cac');
+        });
+        $('.red').on('click', function () {
+            $('.car-red').css('opacity', '1.0');
+            $('h1 span').css('color', '#d93341');
+        });
+        $('.yellow').on('click', function () {
+            $('.car-yellow').css('opacity', '1.0');
+            $('h1 span').css('color', '#dcbb20');
+        });
+        $('.metalic-green').on('click', function () {
+            $('.car-metalic-green').css('opacity', '1.0');
+            $('h1 span').css('color', '#3cd4c9');
+        });
+
+
+        $('.mobile-menu').on('click', function () {
+            $
+        });
+    </script>
+
+</body>
+
+</html>

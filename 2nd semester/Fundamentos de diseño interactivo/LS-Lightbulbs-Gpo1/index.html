@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Local Storage</title>
+        
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/store.everything.min.js"></script>
+        
+        <style>
+            .foco{
+                width: 150px;
+                height: 300px;
+                background-color: #ccc;
+                text-align: center;
+                font-family: sans-serif;
+                border-radius: 10px;
+            }
+            
+            .bulb{
+                width: 150px;
+                height: 150px;
+                background: url('img/lightbulb-off.png');
+            }
+            
+            .switch{
+                width: 150px;
+                height: 75px;
+                background: url('img/sprite.jpg');
+                background-size: 100%;
+                background-position: 0 100%;
+                cursor: pointer;
+            }
+        </style>
+        
+        
+    </head>
+    
+    <body>
+        
+        <div class="foco">
+            <div class="bulb"></div>
+            <div class="switch"></div>
+            <h1>Cocina</h1>
+        </div>
+        
+        <script>
+            
+            
+            $('.switch').on('click',function(){
+                
+                var lb = store.get("lightbulb");
+                
+                if( lb.state == "OFF" ){
+                    //Turn lightbulb on
+                    $('.bulb').css('background','url("img/lightbulb-on.png")');
+                    //Turn the switch to "on" position:
+                    $('.switch').css('background-position','0 0');
+                    //Save an object in Local Storage 
+                    store.update("lightbulb",function(lightbulb){
+                        lightbulb.state = "ON";
+                    });
+                }
+                else{
+                    //Turn the lightbulb OFF
+                    $('.bulb').css('background','url("img/lightbulb-off.png")');
+                    $('.switch').css('background-position','0 100%');
+                    store.update("lightbulb",function(lightbulb){
+                        lightbulb.state = "OFF";
+                    });
+                }
+            });
+            
+            //When page loads, check for the lightbulb state....
+            
+            if( store.get("lightbulb") == undefined ){
+                store.set("lightbulb",{state: "OFF", location:"Kitchen"});
+            }
+            else{
+                //Check lightbulb state
+                
+                var lb = store.get("lightbulb");
+                
+                if( lb.state == "ON"){
+                    //Display the lightbulb as being ON:
+                    $('.bulb').css('background','url("img/lightbulb-on.png")');
+                    $('.switch').css('background-position','0 0');
+                }
+            }
+            
+            
+        </script>
+        
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

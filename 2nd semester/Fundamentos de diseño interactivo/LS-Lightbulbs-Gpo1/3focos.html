@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Local Storage</title>
+        
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/store.everything.min.js"></script>
+        
+        <style>
+            .foco{
+                width: 150px;
+                height: 280px;
+                background-color: #ccc;
+                text-align: center;
+                font-family: sans-serif;
+                border-radius: 10px;
+                float: left;
+                margin-right: 30px;
+                font-size: 12px;
+                position: relative;
+                margin-bottom: 30px;
+            }
+            
+            .foco span{
+                position: absolute;
+                top: 40px;
+                font-size: 22px;
+                left: 40px;
+                width: 70px;
+                display: block;
+                height: 40px;
+                text-align: center;
+            }
+            
+            .bulb{
+                width: 150px;
+                height: 150px;
+                background: url('img/lightbulb-off.png');
+            }
+            
+            .switch{
+                width: 150px;
+                height: 75px;
+                background: url('img/sprite.jpg');
+                background-size: 100%;
+                background-position: 0 100%;
+            }
+            
+            
+        </style>
+        
+        
+    </head>
+    
+    <body>
+        
+        <div class="foco" id="foco-1">
+            <div class="bulb"></div>
+            <div class="switch"></div>
+            <span>100W</span>
+            <h1>Cocina</h1>
+        </div>
+        
+        <div class="foco" id="foco-2">
+            <div class="bulb"></div>
+            <div class="switch"></div>
+            <span>75W</span>
+            <h1>Recámara</h1>
+        </div>
+        
+        <div class="foco" id="foco-3">
+            <div class="bulb"></div>
+            <div class="switch"></div>
+            <span>25W</span>
+            <h1>Sala</h1>
+        </div>
+        
+        
+        
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

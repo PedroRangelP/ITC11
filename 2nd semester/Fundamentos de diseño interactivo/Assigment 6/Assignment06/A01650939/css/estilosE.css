@@ -1,0 +1,296 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+/* STYLES */
+
+body{
+    font-family: 'Yantramanav', sans-serif;
+}
+
+header{
+    background-color: #2F393F;
+    min-height: 50px;
+    color: white;
+    position: sticky;
+}
+
+#header-wrapper{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#header-wrapper .main-title{
+    line-height: 50px;
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    position: absolute;
+}
+
+#header-wrapper #menu{
+    max-width: 26px;
+    float: right;
+    margin: 12px 12px 0 0;
+    display: none;
+}
+
+#header-wrapper ul{
+    float: right;
+}
+
+#header-wrapper ul li{
+    float: left;
+    padding: 0 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 50px;
+}
+
+section{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+section .title{
+    font-weight: 100;
+    font-size: 44px;
+    max-width: 800px;
+    margin: 100px auto 40px auto;
+    text-align: center;
+}
+
+section .tagline{
+    font-weight: 100;
+    max-width: 700px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 300;
+    margin: 0 auto;
+    color: #2E393F;
+    letter-spacing: 1px;
+    line-height: 22px;
+}
+
+.keypoints{
+    width: 750px;
+    height: 433px;
+    position: relative;
+    margin-top: 80px;
+    float: left;
+    
+}
+
+.keypoints img{
+    display: block;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+
+.keypoints span{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 20px;
+    
+}
+
+.keypoints a{
+    color: #2E393F;
+    text-decoration: none;
+    display: block;
+    border-radius: 50%;
+    width: 114px;
+    height: 114px;
+    line-height: 114px;
+    font-weight: 300;
+    text-align: center;
+    position: absolute;
+    background-color: white;
+}
+
+.keypoints a:hover{
+    background-color: #8fd700 !important;
+}
+
+.keypoints .active{
+    background-color: #8fd700;
+}
+
+.keypoints .key-1{
+    top: 187px;
+    left: 3px;
+}
+
+.keypoints .key-2{
+    top: 300px;
+    left: 165px;
+}
+
+.keypoints .key-3{
+    top: 170px;
+    left: 299px;
+}
+
+.keypoints .key-4{
+    top: 18px;
+    left: 443px;
+}
+
+.keypoints .key-5{
+    top: 76px;
+    left: 625px;
+}
+
+section{
+    position: relative;
+}
+
+section .aside{
+    width: 230px;
+    position: absolute;
+    right: 0;
+}
+
+section .aside-title{
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-top: 100px;
+    font-size: 22px;
+}
+
+section .aside-text{
+    font-weight: 100;
+    line-height: 22px;
+    margin-top: 20px;
+}
+
+section .aside#item-2,
+section .aside#item-3,
+section .aside#item-4,
+section .aside#item-5{
+    display: none;
+}
+
+/*RESPONSIVE*/
+@media screen and (max-width: 1000px){
+    .keypoints img {
+        display: none;
+    }
+    .keypoints {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .keypoints a {
+        display: inline-block;
+        border-radius: 0;
+        width: 33.33%;
+        position: static;
+    }
+    .keypoints .key-1 {
+        top: 0;
+        left: 0;
+    }
+    .keypoints .key-2 {
+        top: 0;
+        left: 0;
+    }
+    .keypoints .key-3 {
+        top: 0;
+        left: 0;
+    }
+    .keypoints .key-4 {
+        top: 0;
+        left: 0;
+    }
+    .keypoints .key-5 {
+        top: 0;
+        left: 0;
+    }
+    section .aside {
+        width: 90%;
+        margin: auto;
+        position: relative;
+    }
+    section .aside-title {
+        margin-top: 360px;
+    }
+    #header-wrapper ul {
+        display: none;
+    }
+    #header-wrapper #menu {
+        display: block;
+    }
+    #header-wrapper .main-title {
+        line-height: 50px;
+        font-size: 28px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        position: absolute;
+        padding-left: 12px;
+    }
+    #header-wrapper ul {
+        display: none;
+        width: 100%;
+        background-color: #2E393F;
+    }
+    #header-wrapper ul li {
+        float: none;
+    }
+
+}
+
+
+

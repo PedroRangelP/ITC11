@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile events</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #ddd;
+            font-family: 'Raleway', sans-serif;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        
+        #taparea{
+            width: 20vw;
+            background-color: white;
+            border: 1px solid #999;
+            height: 20vw;
+            border-radius: 50%;
+            font-size: 30px;
+            line-height: 20vw;
+        }
+        
+    </style>
+    
+    <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+    <script src="jquery.mobile.custom.min.js"></script>
+    
+</head>
+<body>
+    
+    
+    <section>
+        <div id="taparea">0</div>
+    </section>
+    
+    
+    <script>
+        
+        var tot = 0;
+        var timer;
+        
+        $("#taparea").on("vmousedown",function(e){
+            timer = setInterval(myFunction, 50);
+        });
+        $("#taparea").on("vmouseup",function(e){
+            clearInterval(timer);
+        });
+        
+        function myFunction(){
+            var w = $('#taparea').css('width').substr(0,$('#taparea').css('width').length-2);
+            w = parseInt(w) + 10;
+            $('#taparea').text(w);
+            w += 'px';
+            $('#taparea').css('width',w);
+            $('#taparea').css('height',w);
+            $('#taparea').css('font-size',w);
+            $('#taparea').css('line-height',w);
+            console.log(w);
+            
+        }
+        
+        
+        
+    </script>
+    
+</body>
+</html>

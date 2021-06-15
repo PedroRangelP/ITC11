@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile events</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #ddd;
+            font-family: 'Raleway', sans-serif;
+        }
+        
+        section{
+            width: 100vw;
+            height: 100vh;
+        }
+        
+        #taparea,
+        #taparea2{
+            width: 80vw;
+            margin-left: 10vw;
+            background-color: white;
+            border: 1px solid #999;
+            height: 80vw;
+            margin-bottom: 60px;
+            position: relative;
+            top: 40px;
+        }
+        
+        p{
+            padding: 10px;
+            text-align: center;
+            font-size: 26px;
+            margin-top: 20px;
+        }
+        
+        #gesture,
+        #gesture2{
+            width: 80vw;
+            height: 50px;
+            background-color: white;
+            opacity: 0.8;
+            border: 1px solid rgba(0,0,0,0.3);
+            margin-left: 10vw;
+            text-align: center;
+        }
+        
+        #save{
+            width: 80vw;
+            height: 50px;
+            background-color: white;
+            opacity: 0.8;
+            border: 1px solid rgba(0,0,0,0.3);
+            margin-left: 10vw;
+            text-align: center;
+            line-height: 50px;
+            font-size: 30px;
+            background-color: aquamarine;
+            margin-top: 30px;
+            opacity: 0;
+            transition: 0.2s;
+        }
+        
+        .dot, .hyphen{
+            background-color: #444;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 18px 5px 0 5px;
+        }
+        
+        .hyphen{
+            width: 38px;
+            border-radius: 4px;
+        }
+        #s2{
+            display: none;
+            background-color: azure;
+        }
+        
+    </style> 
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"  integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+  crossorigin="anonymous"></script>
+    <script src="zingtouch.min.js"></script>
+    <script src="store.everything.min.js"></script>
+    
+</head>
+<body>
+    
+    
+    <section>
+        <div id="taparea">
+            
+        </div>
+        <p>Tap your gesture</p>
+        <div id="gesture">
+            
+        </div>
+        <div id="save">
+            SAVE PATTERN
+        </div>
+    </section>
+    <section id="s2">
+        <div id="taparea2">
+            
+        </div>
+        <p>Enter your gesture</p>
+        <div id="gesture2">
+            
+        </div>
+    </section>
+    
+    
+    <script>
+        
+        
+        var dot = "<div class='dot'></div>";
+        var hyphen = "<div class='hyphen'></div>";
+
+        var tot = 0;
+        var pattern = "";
+        var pattern2 = "";
+        
+        var touchArea = document.getElementById('taparea');
+        var myRegion = ZingTouch.Region(touchArea);
+        
+        var gest = new ZingTouch.Tap({
+            maxDelay: 200,
+            numInputs: 1,
+            tolerance: 10
+        })
+
+        myRegion.bind(touchArea, gest, function(e){
+            var num = e.detail.interval;
+
+            tot++;
+
+            if(tot <= 5){
+                if (num < 50){
+                    //tap
+                    $('#gesture').append(dot);
+                }
+                else{
+                    //silence
+                    $('#gesture').append(hyphen);
+                }
+            }
+
+            if(tot == 5){
+                $('#gesture').css('backgroud-color', )
+            }
+            
+        });
+        
+        $('#save').on('click',function(){
+            
+        });
+        
+        
+        
+    </script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

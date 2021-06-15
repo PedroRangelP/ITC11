@@ -1,0 +1,342 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Final test</title>
+
+    <script src="js/jquery-1.12.1.min.js"></script>
+    <script src="js/store.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <header>
+        <img src="img/logo-aeromexico.png" class="logo">
+        <ul class="menu-1">
+            <li>Reserva</li>
+            <li>Tu Viaje</li>
+            <li>Check-In</li>
+            <li>Upgrade</li>
+            <li>Club Premier</li>
+        </ul>
+        <ul class="menu-2">
+            <li>Promociones</li>
+            <li>Rastrea tu vuelo</li>
+            <li>Destinos</li>
+            <li>Más<img src="img/caret.png" class="caret"></li>
+            <li>|</li>
+        </ul>
+        <img src="img/mail-flag.png" class="flag">
+
+        <img src="img/menu.png" id="menu">
+
+
+        <!-- mobile menu -->
+        <ul class="mobile-menu">
+            <li>Reserva</li>
+            <li>Tu Viaje</li>
+            <li>Check-In</li>
+            <li>Upgrade</li>
+            <li>Club Premier</li>
+            <li>Promociones</li>
+            <li>Rastrea tu vuelo</li>
+            <li>Destinos</li>
+            <li>Más</li>
+        </ul>
+
+    </header>
+    <div id='main'>
+        <div id="left">
+            <ul>
+                <li><a href='#.'>Vuelos</a></li>
+                <li><a href='#.'>Hotel + Avión</a></li>
+                <li><a href='#.'>Hotels</a></li>
+                <li><a href='#.'>Autos</a></li>
+            </ul>
+            <div id="specs">
+                <div class="box" id="flight-type">
+                    <span id='flight-type-text'>Ida y vuelta</span>
+                    <img src="img/red-caret.png">
+                </div>
+                <div class="box" id="passengers">
+                    <span id='tot-pas'>0</span> viajeros
+                    <img src="img/red-caret.png">
+                </div>
+                <div id="cupon">
+                    Ingresa tu cupón
+                </div>
+            </div>
+
+
+            <div id="tipo-de-vuelo">
+                <div class="tipo-box">
+                    <img src="img/ida-y-vuelta.png">
+                    <span>Ida y vuelta</span>
+                </div>
+                <div class="tipo-box">
+                    <img src="img/solo-ida.png">
+                    <span>Vuelo sencillo</span>
+                </div>
+                <div class="tipo-box tipo-box-last">
+                    <img src="img/multidestino.png">
+                    <span>Multidestino</span>
+                </div>
+            </div>
+
+
+            <div id="pasajeros">
+                <div class="pasajeros-box">
+                    <img src="img/less.png" class="less" id="lessadults">
+                    <span id="total-adultos">0</span>
+                    <img src="img/more.png" class="more" id="moreadults">
+                    <p class="pasajeros-box-text">Adultos</p>
+                    <p class="pasajeros-box-subtext">> 12 años</p>
+                </div>
+                <div class="pasajeros-box">
+                    <img src="img/less.png" class="less" id="lesschildren">
+                    <span id="total-ninos">0</span>
+                    <img src="img/more.png" class="more" id="morechildren">
+                    <p class="pasajeros-box-text">Niños</p>
+                    <p class="pasajeros-box-subtext">2 - 11 años</p>
+                </div>
+                <div class="pasajeros-box">
+                    <img src="img/less.png" class="less" id="lessinfantes">
+                    <span id="total-infantes">0</span>
+                    <img src="img/more.png" class="more" id="moreinfantes">
+                    <p class="pasajeros-box-text">Infantes</p>
+                    <p class="pasajeros-box-subtext">
+                        < 2 años</p> </div> </div> <div class="places">
+                            <p class="places-title">ORIGEN | Ver todos</p>
+                            <div class="places-box"><span>Monterrey</span> MTY</div>
+                </div>
+                <div class="places">
+                    <p class="places-title">DESTINO | Ver todos</p>
+                    <div class="places-box"><span>México</span> MEX</div>
+                </div>
+                <div class="promo">
+                    <p class="promo-tag">La vista más bella</p>
+                    <p class="promo-place"><span>Amsterdam</span> AMS</p>
+                    <p class="promo-price">$759USD</p>
+                    <span class="line"></span>
+                </div>
+                <div class="promo">
+                    <p class="promo-tag">Danzas religiosas</p>
+                    <p class="promo-place"><span>Veracruz</span> VER</p>
+                    <p class="promo-price">$2,789MXN</p>
+                    <span class="line"></span>
+                </div>
+                <div class="promo">
+                    <p class="promo-tag">Momento de tranquilidad</p>
+                    <p class="promo-place"><span>Vancouver</span> YVR</p>
+                    <p class="promo-price">$499USD</p>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div id="right">
+                <div class="trip blue">
+                    <img src="img/pic1.jpg">
+                    <p class="trip-title">¡Planea tu viaje este Jueves de Precompra!</p>
+                    <p class="trip-city">Ciudad de México - Huatulco</p>
+                    <p class="trip-price">$<span>2,603</span> MXN</p>
+                    <p class="trip-city">Ciudad de México - Querétaro</p>
+                    <p class="trip-price">$<span>2,728</span> MXN</p>
+                    <input type="button" value="CONOCE MÁS" class="trip-button">
+                    <p class="trip-specs">Vuelo redondo. Consulta términos y condiciones.</p>
+                </div>
+                <div class="trip green">
+                    <img src="img/pic2.jpg">
+                    <p class="trip-title">¡Planea tu viaje este Jueves de Precompra!</p>
+                    <p class="trip-city">Ciudad de México - Huatulco</p>
+                    <p class="trip-price">$<span>2,603</span> MXN</p>
+                    <p class="trip-city">Ciudad de México - Querétaro</p>
+                    <p class="trip-price">$<span>2,728</span> MXN</p>
+                    <input type="button" value="CONOCE MÁS" class="trip-button">
+                    <p class="trip-specs">Vuelo redondo. Consulta términos y condiciones.</p>
+                </div>
+                <div class="trip red">
+                    <img src="img/pic3.jpg">
+                    <p class="trip-title">¡Planea tu viaje este Jueves de Precompra!</p>
+                    <p class="trip-city">Ciudad de México - Huatulco</p>
+                    <p class="trip-price">$<span>2,603</span> MXN</p>
+                    <p class="trip-city">Ciudad de México - Querétaro</p>
+                    <p class="trip-price">$<span>2,728</span> MXN</p>
+                    <input type="button" value="CONOCE MÁS" class="trip-button">
+                    <p class="trip-specs">Vuelo redondo. Consulta términos y condiciones.</p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var adults = 0;
+            var children = 0;
+            var infantes = 0;
+
+            if (!store.get('adults')) {
+                store.set('adults', 0);
+            }
+
+            if (!store.get('children')) {
+                store.set('children', 0);
+            }
+
+            if (!store.get('infantes')) {
+                store.set('infantes', 0);
+            }
+
+            if (!store.get('vuelo')) {
+                store.set('vuelo', 'Ida y vuelta');
+            }
+
+
+            displayVuelo();
+            displayPasajeros();
+
+            $('#menu').on('click', function() {
+
+                $('.mobile-menu').slideToggle();
+
+            });
+
+
+            $('#flight-type').on('click', function() {
+                $('#tipo-de-vuelo').slideToggle();
+            });
+
+
+            $('#passengers').on('click', function() {
+                $('#pasajeros').slideToggle();
+            });
+
+
+            $('.tipo-box').on('click', function() {
+
+                $('.tipo-box').removeClass('selected-box');
+                $(this).addClass('selected-box');
+
+                var text = $(this).text();
+                $('#flight-type-text').text(text);
+                store.set('vuelo', text);
+
+            });
+
+
+            $('#lessadults').on('click', function() {
+                if ($('#total-adultos').text() > 0) {
+                    adults--;
+                    $('#total-adultos').text(adults);
+                    store.set('adults', adults);
+                    displayTotPassengers();
+                }
+
+            });
+
+
+            $('#moreadults').on('click', function() {
+                if ($('#total-adultos').text() < 9) {
+
+                    adults++;
+                    $('#total-adultos').text(adults);
+                    store.set('adults', adults);
+                    displayTotPassengers();
+                }
+
+
+            });
+
+
+            $('#lesschildren').on('click', function() {
+                if ($('#total-ninos').text() > 0) {
+                    children--;
+                    $('#total-ninos').text(children);
+                    store.set('children', children);
+                    displayTotPassengers();
+                }
+
+            });
+
+
+            $('#morechildren').on('click', function() {
+                if ($('#total-ninos').text() < 9) {
+
+                    children++;
+                    $('#total-ninos').text(children);
+                    store.set('children', children);
+                    displayTotPassengers();
+                }
+
+
+            });
+
+
+
+
+            $('#lessinfantes').on('click', function() {
+                if ($('#total-infantes').text() > 0) {
+                    infantes--;
+                    $('#total-infantes').text(infantes);
+                    store.set('infantes', infantes);
+                    displayTotPassengers();
+                }
+
+            });
+
+
+
+
+            $('#moreinfantes').on('click', function() {
+                if ($('#total-infantes').text() < 9) {
+
+                    infantes++;
+                    $('#total-infantes').text(infantes);
+                    store.set('infantes', infantes);
+                    displayTotPassengers();
+                }
+
+
+            });
+
+
+
+
+            function displayTotPassengers() {
+
+                var sum1 = store.get('adults');
+                var sum2 = store.get('children');
+                var sum3 = store.get('infantes');
+                var sum = sum1 + sum2 + sum3;
+
+                $('#tot-pas').text(sum);
+
+
+            }
+
+            function displayVuelo() {
+                var vuelo = store.get('vuelo');
+                $('#flight-type-text').text(vuelo);
+            }
+
+
+
+            function displayPasajeros() {
+                children = store.get('children');
+                adults = store.get('adults');
+                infantes = store.get('infantes');
+                $('#total-adultos').text(adults);
+                $('#total-ninos').text(children);
+                $('#total-infantes').text(infantes);
+                displayTotPassengers();
+            }
+
+        </script>
+
+
+
+</body>
+
+</html>

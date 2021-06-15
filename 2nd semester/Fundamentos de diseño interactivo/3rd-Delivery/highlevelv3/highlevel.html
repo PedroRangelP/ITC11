@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Highlevel prototype</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/highlevel/favicon-32x32.png">
+    <link rel="stylesheet" href="css/highstyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.3.1.min.js"> </script>
+    <script src="js/store.everything.min.js"></script>
+    <script src="js/zingtouch.min.js"></script>
+</head>
+<body>
+    <div class="screen" id="slide-1">
+        <h1 class="main-title">Knocki</h1>
+        <div class="btn" id="reg">Register</div>
+        <div class="btn" id="log">Login</div>
+    </div>
+
+    <div class="screen" id="slide-2">
+        <h1 class="main-title">Knocki</h1>
+        <div class="error-msm">* Username already taken</div>
+        <input type="text"placeholder="Full name" class="input" id="reg-fullname">
+        <input type="text" placeholder="Username" class="input" id="reg-username">
+        <input type="password" placeholder="Password" class="input" id="reg-password">
+        <input type="email" placeholder="email@something.com" class="input" id="reg-email">
+        <div class="btn" id="register-btn">Register</div>
+        
+        <div class="back-btn reg-page" id="btn2">
+            <img src="img/highlevel/back-btn.png" alt="Back">
+        </div>
+    </div>
+
+    <div class="screen" id="slide-3">
+        <h1 class="main-title">Knocki</h1>
+        <div class="error-msm">* Incorrect username or password</div>
+        <input type="text" placeholder="Username" class="input" id="log-username">
+        <input type="password" placeholder="Password" class="input" id="log-password">
+        <div class="btn" id="login-btn">Login</div>
+
+        <div class="back-btn reg-page" id="btn3">
+            <img src="img/highlevel/back-btn.png" alt="Back">
+        </div>
+    </div>
+
+    <div class="screen" id="slide-4">
+        <div class="header">
+            <img class="menu-btn" src="img/highlevel/menu-btn.png" alt="Menu">
+            <h2 class="screentitle">My devices</h2>
+        </div>
+
+        <div class="menu-left">
+            <div id="user-cont">
+                <img src="img/highlevel/user-img.png" alt="User">
+                <h3 id="username">username</h3>
+            </div>
+            <h3 class="item devices-btn">My devices</h3>
+            <h3 class="item account-btn">Account</h3>
+            <div class="logout-btn">
+                <h3 class="item">Log out</h3>
+                <img src="img/highlevel/logout-btn.png" alt="Logout">
+            </div>
+        </div>
+
+
+        <div class="content">
+            <div class="place-container" id="home-cont">
+                <div class="place-status">
+                    <img src="img/highlevel/home-img.png" alt="Home" class="place-icon">
+                    <h2 id="homestatus-lbl">Home (0 Devices)</h2>
+                </div>
+                <div class="knocki-maincont" id="knocki-1">
+                    <img src="img/highlevel/knockion-img.png" alt="Knocki">
+                    <div class="knocki-lbls">
+                        <h3 id="mainName-lbl"></h3>
+                        <h3 id="mainRoom-lbl"></h3>
+                        <h3 id="mainGestures-lbl">0 gestures</h3>
+                    </div>
+                    <div class="delete delete-knocki">Delete</div>
+                </div>
+                <div class="knocki-maincont" id="knocki-2">
+                    <img src="img/highlevel/knockion-img.png" alt="Knocki">
+                    <div class="knocki-lbls">
+                        <h3 id="mainName-lbl"></h3>
+                        <h3 id="mainRoom-lbl"></h3>
+                        <h3 id="mainGestures-lbl">0 gestures</h3>
+                    </div>
+                    <div class="delete delete-knocki">Delete</div>
+                </div>
+                <div class="knocki-maincont" id="knocki-3">
+                    <img src="img/highlevel/knockion-img.png" alt="Knocki">
+                    <div class="knocki-lbls">
+                        <h3 id="mainName-lbl"></h3>
+                        <h3 id="mainRoom-lbl"></h3>
+                        <h3 id="mainGestures-lbl">0 gestures</h3>
+                    </div>
+                    <div class="delete delete-knocki">Delete</div>
+                </div>
+                <div class="knocki-maincont" id="knocki-4">
+                    <img src="img/highlevel/knockion-img.png" alt="Knocki">
+                    <div class="knocki-lbls">
+                        <h3 id="mainName-lbl"></h3>
+                        <h3 id="mainRoom-lbl"></h3>
+                        <h3 id="mainGestures-lbl">0 gestures</h3>
+                    </div>
+                    <div class="delete delete-knocki">Delete</div>
+                </div>
+                <div class="knocki-maincont" id="knocki-5">
+                    <img src="img/highlevel/knockion-img.png" alt="Knocki">
+                    <div class="knocki-lbls">
+                        <h3 id="mainName-lbl"></h3>
+                        <h3 id="mainRoom-lbl"></h3>
+                        <h3 id="mainGestures-lbl">0 gestures</h3>
+                    </div>
+                    <div class="delete delete-knocki">Delete</div>
+                </div>
+                <div class="knocki-maincont" id="knocki-6">
+                    <img src="img/highlevel/knockion-img.png" alt="Knocki">
+                    <div class="knocki-lbls">
+                        <h3 id="mainName-lbl"></h3>
+                        <h3 id="mainRoom-lbl"></h3>
+                        <h3 id="mainGestures-lbl">0 gestures</h3>
+                    </div>
+                    <div class="delete delete-knocki">Delete</div>
+                </div>
+            </div>
+
+            <div class="place-container" id='work-cont'>
+                <div class="place-status">
+                    <img src="img/highlevel/work-img.png" alt="Work" class="place-icon">
+                    <h2 id="workstatus-lbl">Work (0 Devices)</h2>
+                </div>
+                <div class="knocki-maincont" id="knocki-1">
+                    <img src="img/highlevel/knockion-img.png" alt="Knocki">
+                    <div class="knocki-lbls">
+                        <h3 id="mainName-lbl"></h3>
+                        <h3 id="mainRoom-lbl"></h3>
+                        <h3 id="mainGestures-lbl">0 gestures</h3>
+                    </div>
+                    <div class="delete delete-knocki">Delete</div>
+                </div>
+                <div class="knocki-maincont" id="knocki-2">
+                    <img src="img/highlevel/knockion-img.png" alt="Knocki">
+                    <div class="knocki-lbls">
+                        <h3 id="mainName-lbl"></h3>
+                        <h3 id="mainRoom-lbl"></h3>
+                        <h3 id="mainGestures-lbl">0 gestures</h3>
+                    </div>
+                    <div class="delete delete-knocki">Delete</div>
+                </div>
+                <div class="knocki-maincont" id="knocki-3">
+                    <img src="img/highlevel/knockion-img.png" alt="Knocki">
+                    <div class="knocki-lbls">
+                        <h3 id="mainName-lbl"></h3>
+                        <h3 id="mainRoom-lbl"></h3>
+                        <h3 id="mainGestures-lbl">0 gestures</h3>
+                    </div>
+                    <div class="delete delete-knocki">Delete</div>
+                </div>
+                <div class="knocki-maincont" id="knocki-4">
+                    <img src="img/highlevel/knockion-img.png" alt="Knocki">
+                    <div class="knocki-lbls">
+                        <h3 id="mainName-lbl"></h3>
+                        <h3 id="mainRoom-lbl"></h3>
+                        <h3 id="mainGestures-lbl">0 gestures</h3>
+                    </div>
+                    <div class="delete delete-knocki">Delete</div>
+                </div>
+                <div class="knocki-maincont" id="knocki-5">
+                    <img src="img/highlevel/knockion-img.png" alt="Knocki">
+                    <div class="knocki-lbls">
+                        <h3 id="mainName-lbl"></h3>
+                        <h3 id="mainRoom-lbl"></h3>
+                        <h3 id="mainGestures-lbl">0 gestures</h3>
+                    </div>
+                    <div class="delete delete-knocki">Delete</div>
+                </div>
+                <div class="knocki-maincont" id="knocki-6">
+                    <img src="img/highlevel/knockion-img.png" alt="Knocki">
+                    <div class="knocki-lbls">
+                        <h3 id="mainName-lbl"></h3>
+                        <h3 id="mainRoom-lbl"></h3>
+                        <h3 id="mainGestures-lbl">0 gestures</h3>
+                    </div>
+                    <div class="delete delete-knocki">Delete</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="plusadd-btn">
+            <h3>Add a Knocki</h3>
+            <img src="img/highlevel/add-btn.png" alt="Add a Knocki">
+        </div>  
+    </div>
+
+    <div class="screen" id="slide-5">
+        <div class="header">
+            <img class="menu-btn" src="img/highlevel/menu-btn.png" alt="Menu">
+            <h2 class="screentitle">Add a Knocki</h2>
+        </div>
+
+        <div class="menu-left">
+            <div id="user-cont">
+                <img src="img/highlevel/user-img.png" alt="User">
+                <h3 id="username">username</h3>
+            </div>
+            <h3 class="item devices-btn">My devices</h3>
+            <h3 class="item account-btn">Account</h3>
+            <div class="logout-btn">
+                <h3 class="item">Log out</h3>
+                <img src="img/highlevel/logout-btn.png" alt="Logout">
+            </div>
+        </div>
+
+
+        <div class="content">
+            <div class="addinput-cont">
+                <h3>Place:</h3>
+                <select name="place" id="knocki-place" class="addinput">
+                    <option value="Home">Home</option>
+                    <option value="Work">Work</option>
+                </select>
+            </div>
+            <div class="addinput-cont">
+                <h3>Room:</h3>
+                <select name="room" id="knocki-room" class="addinput">
+                    <option value="Bedroom">Bedroom</option>
+                    <option value="Dining room">Dining room</option>
+                    <option value="Garage">Garage</option>
+                    <option value="Kitchen">Kitchen</option>
+                    <option value="Laundry">Laundry</option>
+                    <option value="Living room">Living room</option>
+                    <option value="Master bedroom">Master bedroom</option>
+                    <option value="Office">Office</option>
+                    <option value="TV romm">TV room</option>
+                    <option value="Workshop">Workshop</option>
+                </select>
+            </div>
+            <div class="addinput-cont">
+                <h3>Name:</h3>
+                <input type="text" placeholder="John's bedroom" class="addinput" id="knocki-name">
+            </div>
+
+
+            <h2 id="search-status">Detecting new devices...</h2>
+            <div class="knocki-search">
+                <div class="knocki-result" id="device1">
+                    <img src="img/highlevel/knockioff-img.png" alt="Knocki">
+                    <h4 id="random-1">Knocki 1</h4>
+                    <div class="addbtn-container">
+                        <div class="addknocki-btn" id="knocki-1">Add this Knocki</div>
+                    </div>
+                </div>
+                <div class="knocki-result" id="device2">
+                    <img src="img/highlevel/knockioff-img.png" alt="Knocki">
+                    <h4 id="random-2">Knocki 4</h4>
+                    <div class="addbtn-container">
+                        <div class="addknocki-btn" id="knocki-2">Add this Knocki</div>
+                    </div>
+                </div>
+                <div class="knocki-result" id="device3">
+                    <img src="img/highlevel/knockioff-img.png" alt="Knocki">
+                    <h4 id="random-3">Knocki 3</h4>
+                    <div class="addbtn-container">
+                        <div class="addknocki-btn" id="knocki-3">Add this Knocki</div>
+                    </div>
+                </div>
+                <div class="knocki-result" id="device4">
+                    <img src="img/highlevel/knockioff-img.png" alt="Knocki">
+                    <h4 id="random-4">Knocki 4</h4>
+                    <div class="addbtn-container">
+                        <div class="addknocki-btn" id="knocki-4">Add this Knocki</div>
+                    </div>
+                </div>
+                <div class="knocki-result" id="device5">
+                    <img src="img/highlevel/knockioff-img.png" alt="Knocki">
+                    <h4 id="random-5">Knocki 5</h4>
+                    <div class="addbtn-container">
+                        <div class="addknocki-btn" id="knocki-5">Add this Knocki</div>
+                    </div>
+                </div>
+                <div class="knocki-result" id="device6">
+                    <img src="img/highlevel/knockioff-img.png" alt="Knocki">
+                    <h4 id="random-6">Knocki 6</h4>
+                    <div class="addbtn-container">
+                        <div class="addknocki-btn" id="knocki-6">Add this Knocki</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="back-btn" id="btn5">
+            <img src="img/highlevel/back-btn.png" alt="Back">
+        </div>
+    </div>
+
+    <div class="screen" id="slide-6">
+        <div class="header">
+            <img class="menu-btn" src="img/highlevel/menu-btn.png" alt="Menu">
+            <h2 class="screentitle">Device summary</h2>
+        </div>
+    
+        <div class="menu-left">
+            <div id="user-cont">
+                <img src="img/highlevel/user-img.png" alt="User">
+                <h3 id="username">username</h3>
+            </div>
+            <h3 class="item devices-btn">My devices</h3>
+            <h3 class="item account-btn">Account</h3>
+            <div class="logout-btn">
+                <h3 class="item">Log out</h3>
+                <img src="img/highlevel/logout-btn.png" alt="Logout">
+            </div>
+        </div>
+    
+    
+        <div class="content">
+            <div class="summary-cont">
+                <h3>Name:</h3>
+                <h3 id="knockiname-lbl">Knocki</h3>
+            </div>
+            <div class="summary-cont">
+                <h3>ID:</h3>
+                <h3 id="knockiid-lbl">Knocki</h3>
+            </div>
+            <div class="summary-cont">
+                <h3>Status:</h3>
+                <div class="switch-cont">
+                    <img src="img/highlevel/switchon-img.png" alt="Switch" class="switch">
+                </div>
+            </div>
+            <h2>Gestures</h2>
+            <div class="summary-cont plusgesture-btn">
+                <h4>Add a new gesture</h4>
+                <img src="img/highlevel/add-btn.png" alt="Add gesture">
+            </div>
+            <div class="gesture-cont" id="gest1">
+                <h5 class="gestact-lbl"></h5>
+                <div class="gestdel-cont">
+                    <h5 class="gestname-lbl"></h5>
+                    <div class="deletegest-btn delete" id="delete1">Delete</div>
+                </div>
+            </div>
+            <div class="gesture-cont" id="gest2">
+                <h5 class="gestact-lbl"></h5>
+                <div class="gestdel-cont">
+                    <h5 class="gestname-lbl"></h5>
+                    <div class="deletegest-btn delete" id="delete2">Delete</div>
+                </div>
+            </div>
+            <div class="gesture-cont" id="gest3">
+                <h5 class="gestact-lbl"></h5>
+                <div class="gestdel-cont">
+                    <h5 class="gestname-lbl"></h5>
+                    <div class="deletegest-btn delete" id="delete3">Delete</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="back-btn" id="btn6">
+            <img src="img/highlevel/back-btn.png" alt="Back">
+        </div>
+    </div>
+
+    <div class="screen" id="slide-7">
+        <div class="header">
+            <img class="menu-btn" src="img/highlevel/menu-btn.png" alt="Menu">
+            <h2 class="screentitle">Add a gesture</h2>
+        </div>
+    
+        <div class="menu-left">
+            <div id="user-cont">
+                <img src="img/highlevel/user-img.png" alt="User">
+                <h3 id="username">username</h3>
+            </div>
+            <h3 class="item devices-btn">My devices</h3>
+            <h3 class="item account-btn">Account</h3>
+            <div class="logout-btn">
+                <h3 class="item">Log out</h3>
+                <img src="img/highlevel/logout-btn.png" alt="Logout">
+            </div>
+        </div>
+    
+        <div class="content">
+            <div id="taparea">
+                <img src="img/highlevel/tap-img.png" alt="Tap">
+                <h3>Tap your gesture</h3>
+            </div>
+            <div id="gesture"></div>
+            <div class="addaction-cont">
+                <h3>Gesture action:</h3>
+                <select name="action" id="gesture-action" class="addinput">
+                    <option value="Turn lights on/off">Turn lights on/off</option>
+                    <option value="Find lost phone">Find lost phone</option>
+                    <option value="Climate control">Climate control</option>
+                    <option value="Brew cofee">Brew cofee</option>
+                    <option value="Knocking door">Knocking door</option>
+                    <option value="Play/pause music">Play/pause music</option>
+                    <option value="Turn TV on/off">Turn TV on/off</option>
+                    <option value="Set alarm">Set alarm</option>
+                    <option value="Lock door">Lock door</option>
+                </select>
+            </div>
+            <div class="gestbtn-cont">
+                <div class="gestbtn" id="reset-btn">Reset</div>
+                <div class="addgest-btn gestbtn">Accept</div>
+            </div>
+        </div>
+
+        <div class="back-btn" id="btn7">
+            <img src="img/highlevel/back-btn.png" alt="Back">
+        </div>
+    </div>
+
+    <div class="screen" id="slide-8">
+        <div class="header">
+            <img class="menu-btn" src="img/highlevel/menu-btn.png" alt="Menu">
+            <h2 class="screentitle">Account</h2>
+        </div>
+    
+        <div class="menu-left">
+            <div id="user-cont">
+                <img src="img/highlevel/user-img.png" alt="User">
+                <h3 id="username">username</h3>
+            </div>
+            <h3 class="item devices-btn">My devices</h3>
+            <h3 class="item account-btn">Account</h3>
+            <div class="logout-btn">
+                <h3 class="item">Log out</h3>
+                <img src="img/highlevel/logout-btn.png" alt="Logout">
+            </div>
+        </div>
+    
+    
+        <div class="content">
+            <img src="img/highlevel/user-img.png" alt="User">
+            <h1 class="acc-name acc-text">Full Name</h1>
+            <h2 class="acc-username acc-text">Username</h2>
+            <h3 class="acc-email acc-text">e-mail</h3>
+        </div>
+    
+        <div class="back-btn" id="btn8">
+            <img src="img/highlevel/back-btn.png" alt="Back">
+        </div>
+    </div>
+
+    <script>
+        /********************/
+        /*    Variables     */
+        /********************/
+
+        var activeUser;
+        var fullname;
+        var username;
+        var password;
+        var email;
+
+
+        /********************/
+        /*  Local Storage   */
+        /********************/
+
+        //Load data when restarting/refreshing
+        if(store.get('active-user')==null){
+            store.set('active-user', '');
+        }else if(store.get('active-user')!=''){
+            activeUser = store.get('active-user');
+            var getUser = store.get(activeUser);
+
+            //Load user data
+            for(var i=getUser.totalKnocki; i<=6; i++){
+                var numknocki = activeUser + '-knocki-' + i;
+                $('#slide-4 #knocki-' + i).attr('id', numknocki);
+                $('#slide-5 #knocki-' + i).attr('id', numknocki);
+            }
+
+            for (var i = 1; i <= 6; i++) {
+                var numknocki = activeUser + '-knocki-' + i;
+                var knocki = store.get(numknocki);
+
+                if (knocki == null) {
+                    console.log('Empty Knocki')
+                } else {
+                    $('#slide-4 #knocki-' + i).attr('id', numknocki);
+                    $('#slide-5 #knocki-' + i).attr('id', numknocki);
+
+                    if (knocki.place == "Home") {
+                        $('#home-cont #' + numknocki).css('display', 'flex');
+                        $('#home-cont #' + numknocki + ' #mainName-lbl').text(knocki.name);
+                        $('#home-cont #' + numknocki + ' #mainRoom-lbl').text(knocki.room);
+                        $('#home-cont #' + numknocki + ' #mainGestures-lbl').text(knocki.gestures + " gestures");
+                    } else if (knocki.place == "Work") {
+                        $('#work-cont #' + numknocki).css('display', 'flex');
+                        $('#work-cont #' + numknocki + ' #mainName-lbl').text(knocki.name);
+                        $('#work-cont #' + numknocki + ' #mainRoom-lbl').text(knocki.room);
+                        $('#work-cont #' + numknocki + ' #mainGestures-lbl').text(knocki.gestures + " gestures");
+                    }
+                    if (knocki.status == "on") {
+                        $('#slide-4 #' + numknocki + ' img').attr('src', 'img/highlevel/knockion-img.png');
+                    } else {
+                        $('#slide-4 #' + numknocki + ' img').attr('src', 'img/highlevel/knockioff-img.png');
+                    }
+                }
+
+                $('#homestatus-lbl').text("Home (" + getUser.homeDevices + " devices)");
+                $('#workstatus-lbl').text("Work (" + getUser.workDevices + " devices)");
+            }
+
+            $('#username').text(activeUser);
+            $('.screen').hide();
+            $('#slide-4').show();
+        }
+
+
+        /********************/
+        /*  Login/Register  */
+        /********************/
+
+        $('#reg').on('click', function(){
+            $('.screen').hide();
+            $('#slide-2').css('display', 'flex');
+            $('.error-msm').hide();
+            $('.back-btn').show();
+        });
+
+        $('#log').on('click', function(){
+            $('.screen').hide();
+            $('#slide-3').css('display', 'flex');
+            $('.error-msm').hide();
+            $('.back-btn').show();
+        });
+
+        $('#register-btn').on('click', function(){
+            fullname = $("#reg-fullname").val();
+            username = $("#reg-username").val();
+            password = $("#reg-password").val();
+            email = $("#reg-email").val();
+
+            if (store.get(username)==null){
+                store.set(username,{password: password, fullname: fullname, email: email, homeDevices: 0, workDevices: 0, totalKnocki: 0});
+                activeUser = username;
+                store.set('active-user', activeUser);
+
+                for (var i = 1; i <= 6; i++) {
+                    $('#slide-4 #knocki-' + i).attr('id', activeUser + '-knocki-' + i);
+                    $('#slide-5 #knocki-' + i).attr('id', activeUser + '-knocki-' + i);
+                }
+
+                $("#reg-fullname").val("");
+                $("#reg-username").val("");
+                $("#reg-password").val("");
+                $("#reg-email").val("");
+                $('#username').text(username);
+                $('.screen').hide();
+                $('#slide-4').show();
+            }else{
+                $('.error-msm').hide();
+                $('.error-msm').slideDown();
+            }            
+        });
+
+        $('#login-btn').on('click', function(){
+            username = $("#log-username").val();
+            password = $("#log-password").val();
+            var getUser = store.get(username);
+
+            if(getUser==null){
+                $('.error-msm').hide();
+                $('.error-msm').slideDown();
+            }else if(getUser.password==password){
+                activeUser = username;
+                store.set('active-user', activeUser);
+                
+                //Load user data
+                for (var i = getUser.totalKnocki; i <= 6; i++) {
+                    var numknocki = activeUser + '-knocki-' + i;
+                    $('#slide-4 #knocki-' + i).attr('id', numknocki);
+                    $('#slide-5 #knocki-' + i).attr('id', numknocki);
+                }
+
+                for(var i=1; i<=6; i++){
+                    var numknocki = activeUser + '-knocki-' + i;
+                    var knocki = store.get(numknocki);
+
+                    if(knocki==null){
+                        console.log('Empty Knocki')
+                    } else {
+                        $('#slide-4 #knocki-' + i).attr('id', numknocki);
+                        $('#slide-5 #knocki-' + i).attr('id', numknocki);
+
+                        if (knocki.place == "Home") {
+                            $('#home-cont #' + numknocki).css('display', 'flex');
+                            $('#home-cont #' + numknocki + ' #mainName-lbl').text(knocki.name);
+                            $('#home-cont #' + numknocki + ' #mainRoom-lbl').text(knocki.room);
+                            $('#home-cont #' + numknocki + ' #mainGestures-lbl').text(knocki.gestures + " gestures");
+                        } else if (knocki.place == "Work") {
+                            $('#work-cont #' + numknocki).css('display', 'flex');
+                            $('#work-cont #' + numknocki + ' #mainName-lbl').text(knocki.name);
+                            $('#work-cont #' + numknocki + ' #mainRoom-lbl').text(knocki.room);
+                            $('#work-cont #' + numknocki + ' #mainGestures-lbl').text(knocki.gestures + " gestures");
+                        }
+                        if (knocki.status == "on") {
+                            $('#slide-4 #' + numknocki + ' img').attr('src', 'img/highlevel/knockion-img.png');
+                        } else {
+                            $('#slide-4 #' + numknocki + ' img').attr('src', 'img/highlevel/knockioff-img.png');
+                        }
+                    }
+
+                    $('#homestatus-lbl').text("Home (" + getUser.homeDevices + " devices)");
+                    $('#workstatus-lbl').text("Work (" + getUser.workDevices + " devices)");
+
+                }
+
+
+                $('#username').text(username);
+                $("#log-username").val("");
+                $("#log-password").val("");
+                $('.screen').hide();
+                $('#slide-4').show();
+            }else{
+                $('.error-msm').hide();
+                $('.error-msm').slideDown();
+            }  
+        });
+
+
+        /********************/
+        /*    Add Knocki    */
+        /********************/
+
+        $('.plusadd-btn').on('click', function(){
+            var user = store.get(activeUser);
+            var number = user.totalKnocki +1;
+
+            if((number)<=6){
+                var ran = Math.floor(Math.random() * (+999999 - +100000)) + +0;
+                $('#device'+number).css('display', 'flex');
+                $('#random-'+number).text(ran);
+                store.set(activeUser+'-knocki-'+number,{id: ran, place: '', room: '', name: '', gestures: 0, status: ''});
+            }else{
+                $('#search-status').text("No available devices");
+            }
+
+            $('.screen').hide();
+            $('#slide-5').show();
+            $('.back-btn').show();
+        });
+
+        $('.addknocki-btn').on('click', function(){
+            var user = store.get(activeUser);
+            var total = user.totalKnocki + 1;
+            var place = $("#knocki-place :selected").text();
+            var room = $("#knocki-room :selected").text();
+            var name = $("#knocki-name").val();
+            var selectedKnocki = $(this).attr('id');
+            var knocki = store.get(selectedKnocki);
+
+            if(place=="Home"){
+                var totalHome = user.homeDevices + 1;
+                store.set(activeUser,{password: user.password, fullname: user.fullname, email: user.email, homeDevices: totalHome, workDevices: user.workDevices, totalKnocki: total});
+                $('#homestatus-lbl').text("Home (" + totalHome + " devices)");
+                $('#home-cont #'+selectedKnocki).css('display', 'flex');
+                $('#home-cont #'+selectedKnocki+' #mainName-lbl').text(name);
+                $('#home-cont #'+selectedKnocki+' #mainRoom-lbl').text(room);
+            }else{
+                var totalWork = user.workDevices + 1;
+                store.set(activeUser,{password: user.password, fullname: user.fullname, email: user.email, homeDevices: user.homeDevices, workDevices: totalWork, totalKnocki: total});
+                $('#workstatus-lbl').text("Work (" + totalWork + " devices)");
+                $('#work-cont #'+selectedKnocki).css('display', 'flex');
+                $('#work-cont #'+selectedKnocki+' #mainName-lbl').text(name);
+                $('#work-cont #'+selectedKnocki+' #mainRoom-lbl').text(room);
+            }
+            store.set(selectedKnocki,{id: knocki.id, place: place, room: room, name: name, gestures: knocki.gestures, status: 'on'});
+            
+            $('#device'+total).hide();
+            $("#knocki-name").val("");
+            $('#slide-4 #'+selectedKnocki+' img').attr('src', 'img/highlevel/knockion-img.png');
+            $('.screen').hide();
+            $('#slide-4').show();
+        });
+
+
+        /********************/
+        /*  Device Summary  */
+        /********************/
+
+        $('.knocki-lbls').on('click', function () {
+                var selectedKnocki = $(this).parent().attr('id');
+                var knocki = store.get(selectedKnocki);
+                
+                $('#knockiname-lbl').text(knocki.name);
+                $('#knockiid-lbl').text(knocki.id);
+                $('.switch').attr('id', selectedKnocki);
+                $('.plusgesture-btn').attr('id', selectedKnocki);
+                if (knocki.status == "on") {
+                    $('.switch').attr('src', 'img/highlevel/switchon-img.png');
+                } else {
+                    $('.switch').attr('src', 'img/highlevel/switchoff-img.png');
+                }
+
+                //Load gestures
+                $('#slide-6 .gesture-cont').hide();
+                for(var i=1; i<=knocki.gestures; i++){
+                    var gestid = knocki.id + '-' + i;
+                    var gest = store.get(gestid);
+                    var gesture = gest.gesture;
+                    var action = gest.action;
+
+                    $('#delete'+i).attr('id', gestid);
+                    $('#gest'+i+' .gestact-lbl').text(action);
+                    $('#gest'+i+' .gestname-lbl').text(gesture);
+                    $('#gest'+i).css('display', 'flex');
+                }
+
+                $('.screen').hide();
+                $('#slide-6').show();
+                $('.back-btn').show();
+        });
+
+        $('.switch').on('click', function () {
+                var selectedKnocki = $(this).attr('id');
+                var knocki = store.get(selectedKnocki);
+
+                if (knocki.status == "on") {
+                    $('.switch').attr('src', 'img/highlevel/switchoff-img.png');
+                    store.set(selectedKnocki, {id: knocki.id, place: knocki.place, room: knocki.room, name: knocki.name, gestures: knocki.gestures, status: 'off'});
+                    $('#slide-4 #'+selectedKnocki+' img').attr('src', 'img/highlevel/knockioff-img.png');
+                } else {
+                    $('.switch').attr('src', 'img/highlevel/switchon-img.png');
+                    store.set(selectedKnocki, {id: knocki.id, place: knocki.place, room: knocki.room, name: knocki.name, gestures: knocki.gestures, status: 'on'});
+                    $('#slide-4 #'+selectedKnocki+' img').attr('src', 'img/highlevel/knockion-img.png');
+                }
+        });
+        
+        $('.plusgesture-btn').on('click', function () {
+            var selectedKnocki = $(this).attr('id');
+            var knocki = store.get(selectedKnocki);
+
+            $('.addgest-btn').attr('id', selectedKnocki);
+
+            if(knocki.gestures<3){
+                $('.screen').hide();
+                $('#slide-7').show();
+                $('.back-btn').show();
+            }
+        });
+
+
+        /********************/
+        /*   Add gesture    */
+        /********************/
+
+        var dot = " ⬤";
+        var hyphen = " ―";
+        var tot = 0;
+        var touchArea = document.getElementById('taparea');
+        var myRegion = ZingTouch.Region(touchArea);
+        var gest = new ZingTouch.Tap({
+            maxDelay: 200,
+            numInputs: 1,
+            tolerance: 10
+        });
+        
+        myRegion.bind(touchArea, gest, function(e){
+            var num = e.detail.interval;
+            tot++;
+            if(tot<=5){
+                if(num<50){
+                    $('#gesture').append(dot);
+                }
+                else{
+                    $('#gesture').append(hyphen);
+                }
+            }
+            if(tot == 5){
+                $('#gesture').css('border', 'solid 6px #01ff06');
+            } 
+        });
+
+        $('#reset-btn').on('click', function(){
+            $('#gesture').text('');
+            $('#gesture').css('border', 'solid 6px #005377');
+        });
+
+        //Save gesture
+        $('.addgest-btn').on('click', function(){
+            var selectedKnocki = $(this).attr('id');
+            var knocki = store.get(selectedKnocki);
+            var number = knocki.gestures+1;
+            var gestid = knocki.id + '-' + number;
+            var gesture = $('#gesture').text();
+            var action = $("#gesture-action :selected").text();
+
+            store.set(gestid,{action: action, gesture: gesture});
+            store.set(selectedKnocki,{id: knocki.id, place: knocki.place, room: knocki.room, name: knocki.name, gestures: number, status: knocki.status});
+
+            if (knocki.place == "Home") {
+                $('#home-cont #'+selectedKnocki+' #mainGestures-lbl').text(number + " gestures");
+            } else if (knocki.place == "Work") {
+                $('#work-cont #'+selectedKnocki+' #mainGestures-lbl').text(number + " gestures");
+            }
+            
+            $('#gest'+number+' .gestact-lbl').text(action);
+            $('#gest'+number+' .gestname-lbl').text(gesture);
+            $('#gest'+number).css('display', 'flex');
+            $('.screen').hide();
+            $('#slide-6').show();
+        });
+
+
+        /********************/
+        /*  Remove gesture  */
+        /********************/
+        
+        /*$('.deletegest-btn').on('click', function(){
+            var selectedGesture = $(this).attr('id');
+            store.remove(selectedGesture);
+        });*/
+
+
+        /********************/
+        /*  Remove knocki   */
+        /********************/
+        
+        $('.delete-knocki').on('click', function(){
+            var selectedKnocki = $(this).parent().attr('id');
+            var knocki = store.get(selectedKnocki);
+            var knockiid = knocki.id;
+            var user = store.get(activeUser);
+            var numKnocki = user.totalKnocki-1;
+            var numHome = user.homeDevices-1;
+            var numWork = user.workDevices-1;
+
+            if(knocki.place=='Home'){
+                store.set(activeUser,{password: user.password, fullname: user.fullname, email: user.email, homeDevices: numHome, workDevices: user.workDevices, totalKnocki: numKnocki});
+                $('#home-cont #'+selectedKnocki).hide();
+                $('#homestatus-lbl').text("Home (" + numHome + " devices)");
+            }else if(knocki.place=='Work'){
+                store.set(activeUser,{password: user.password, fullname: user.fullname, email: user.email, homeDevices: user.homeDevices, workDevices: numWork, totalKnocki: numKnocki});
+                $('#work-cont #'+selectedKnocki).hide();
+                $('#workstatus-lbl').text("Work (" + numWork + " devices)");
+            }
+
+            for(var i=1; i<=3; i++){
+                store.remove(knockiid+'-'+i);
+            }
+            store.remove(selectedKnocki);
+        });
+
+
+        /********************/
+        /*    Menu Left     */
+        /********************/
+        
+        $('.menu-btn').on('click', function(){
+            $('.menu-left').slideToggle();
+        });
+
+        $('.devices-btn').on('click', function(){
+            $('.back-btn').hide();
+            $('#slide-4').show();
+            $('.menu-left').hide();
+        });
+
+        $('.account-btn').on('click', function () {
+            $('.back-btn').show();
+
+            var userData = store.get(activeUser);
+            var name = userData.fullname;
+            var email = userData.email;
+
+            $('.acc-name').text(name);
+            $('.acc-username').text(activeUser);
+            $('.acc-email').text(email);
+
+            $('.screen').hide();
+            $('#slide-8').show();
+            $('.menu-left').hide();
+        });
+
+        $('.logout-btn').on('click', function(){
+            $('.screen').hide();
+            $('#slide-1').css('display', 'flex');
+            $('.menu-left').hide();
+
+            //Clear app
+            store.set('active-user', '');
+            for (var i = 1; i <= 6; i++) {
+                var numknocki = activeUser + '-knocki-' + i;
+                $('#slide-4 #'+numknocki+' #mainGestures-lbl').text("0 gestures");
+                $('#slide-4 #'+numknocki).attr('id', 'knocki-'+i);
+                $('#slide-5 #'+numknocki).attr('id', 'knocki-'+i);
+                $('.knocki-maincont').hide();
+            }
+            $('#homestatus-lbl').text("Home (0 devices)");
+            $('#workstatus-lbl').text("Work (0 devices)");
+        });
+
+
+        /********************/
+        /*     Back btn     */
+        /********************/
+        
+        $('#btn2').on('click', function(){
+            $('.screen').hide();
+            $('#slide-1').show();
+        });
+
+        $('#btn3').on('click', function(){
+            $('.screen').hide();
+            $('#slide-1').show();
+        });
+
+        $('#btn5').on('click', function(){
+            $('.screen').hide();
+            $('#slide-4').show();
+        });
+
+        $('#btn6').on('click', function(){
+            $('.screen').hide();
+            $('#slide-4').show();
+        });
+
+        $('#btn7').on('click', function(){
+            $('.screen').hide();
+            $('#slide-6').show();
+        });
+
+        $('#btn8').on('click', function(){
+            $('.screen').hide();
+            $('#slide-4').show();
+        });
+
+        $('.back-btn').on('click', function(){
+            $('.back-btn').hide();
+        });
+        
+    </script>
+    
+</body>
+</html>

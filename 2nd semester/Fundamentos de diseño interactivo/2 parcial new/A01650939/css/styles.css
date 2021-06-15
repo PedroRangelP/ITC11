@@ -1,0 +1,611 @@
+/********************************/
+/*                              */
+/*           CSS RESET          */
+/*                              */
+/********************************/
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/********************************/
+/*                              */
+/*           ESTILOS            */
+/*                              */
+/********************************/
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+/* HEADER */
+
+header {
+    background-color: #0b2343;
+    color: #fff;
+    min-height: 60px;
+    min-width: 320px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 800;
+}
+
+header .logo{
+    max-height: 60px;
+    display: block;
+}
+
+header ul{
+    position: absolute;
+    top: 22px;
+}
+
+header ul li{
+    display: inline-block;
+}
+
+header ul.menu-1{
+    left: 240px;
+}
+
+header ul.menu-1 li{
+    padding-right: 20px;
+}
+
+header ul.menu-2{
+    top: 22px;
+    right: 100px;
+}
+
+header ul.menu-2 li{
+    font-size: 13px;
+    font-weight: 400;
+    padding-right: 10px;
+}
+
+header .caret{
+    max-height: 16px;
+    position: absolute;
+    top: 0;
+}
+
+header .flag{
+    max-height: 50px;
+    position: absolute;
+    right: 0;
+    top: 4px;
+}
+
+header #menu{
+    height: 60px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+
+/* MOBILE MENU */
+
+header ul.mobile-menu{
+    position: relative;
+    top: inherit;
+    display: none;
+}
+
+header ul.mobile-menu li{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-left: 20px;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+
+/* MAIN */
+
+#main{
+    margin-top: 60px;
+}
+
+/* LEFT */
+
+#left{
+    width: 37.5%;
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+}
+
+#left ul{
+    width: 100%;
+}
+
+#left ul li{
+    float: left;
+    width: 25%;
+    text-align: center;
+    font-size: 16px;
+}
+
+#left ul li a{
+    transition: all 0.1s ease-in;
+    color: #0b2343;
+    text-decoration: none;
+    display: block;
+}
+
+#left ul li:hover a{
+    color: #007dc3;
+    -webkit-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    transform: translateY(-4px);
+}
+
+#specs{
+    margin-top: 50px;
+}
+
+.box{
+    height: 40px;
+    border: 1px solid #ccc;
+    position: relative;
+    float: left;
+    width: 36%;
+    line-height: 40px;
+    padding-left: 2%;
+    box-sizing: border-box;
+    margin-right: 6%;
+    color: #0b2343;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.box img{
+    max-width: 18px;
+    position: absolute;
+    top: 12px;
+    right: 0;
+}
+
+
+.selected-box{
+    background-color: #007dc3 !important;
+    color: white !important;
+}
+
+
+
+#cupon{
+    color: #ccc;
+    font-size: 12px;
+    float: left;
+    width: 10%;
+    line-height: 16px;
+    padding-top: 5px;
+}
+
+
+
+
+
+/* TIPO DE VUELO */
+
+#tipo-de-vuelo{
+    display: none;
+}
+
+#tipo-de-vuelo{
+    width: 33vw;
+    height: calc(11vw);
+    border: 1px solid red;
+    position: absolute;
+    top: 186px;
+    border: 1px solid #80bee1;
+    background-color: white;
+}
+
+#tipo-de-vuelo:before{
+    width: 23px;
+    content: " ";
+    background-image: url(../imgA/caret-sel.png);
+    background-size: 100%;
+    position: absolute;
+    left: 10px;
+    top: -11px;
+    height:11px;
+}
+
+#tipo-de-vuelo .tipo-box{
+    float: left;
+    width: calc(33.333% - 1px);
+    height: 100%;
+    background-color: white;
+    border-right: 1px solid #ddd;
+}
+
+#tipo-de-vuelo .tipo-box:hover,
+#tipo-de-vuelo .tipo-box:hover span{
+    background-color: #007dc3;
+    color: white;
+}
+
+#tipo-de-vuelo .tipo-box-last{
+    border-right: none;
+}
+
+#tipo-de-vuelo .tipo-box img{
+    max-width: 40%;
+    margin: 20% auto 0 auto;
+    display: block;
+}
+
+#tipo-de-vuelo .tipo-box span{
+    display: block;
+    margin: 0;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+
+/* PASAJEROS */
+
+#pasajeros{
+    display: none;
+}
+
+#pasajeros{
+    width: 33vw;
+    height: calc(11vw);
+    border: 1px solid red;
+    position: absolute;
+    top: 186px;
+    border: 1px solid #80bee1;
+    background-color: white;
+}
+
+#pasajeros:before{
+    width: 23px;
+    content: " ";
+    background-image: url(../imgA/caret-sel.png);
+    background-size: 100%;
+    position: absolute;
+    left: 16vw;
+    top: -11px;
+    height:11px;
+}
+
+#pasajeros .pasajeros-box{
+    float: left;
+    width: calc(33.333% - 1px);
+    height: 100%;
+    background-color: white;
+    border-right: 1px solid #ddd;
+    text-align: center;
+}
+
+#pasajeros .pasajeros-box:hover,
+#pasajeros .pasajeros-box:hover span,
+#pasajeros .pasajeros-box:hover p{
+    background-color: #007dc3;
+    color: white !important;
+}
+
+#pasajeros .pasajeros-box-last{
+    border-right: none;
+}
+
+#pasajeros .pasajeros-box img{
+    max-width: 26%;
+    margin: 20% auto 0 auto;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#pasajeros .pasajeros-box span{
+    display: inline-block;
+    margin: 0;
+    text-align: center;
+    color: #666;
+    font-size: 5vw;
+    font-weight: 100;
+}
+
+#pasajeros .pasajeros-box p.pasajeros-box-text{
+    color: #0b2343;
+    font-size: 1.1vw;
+    margin-top: 10px;
+}
+
+
+#pasajeros .pasajeros-box p.pasajeros-box-subtext{
+    color: #aaa;
+    font-size: 0.8vw;
+    font-weight: 100;
+    margin-top: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.places{
+    float: none;
+    clear: both;
+    padding-top: 50px;
+    color: #aaa;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.places .places-box{
+    width: 100%;
+    border: 1px solid #ccc;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    color: #0b2343;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.places .places-box span{
+    font-weight: 700;
+}
+
+
+.promo{
+    margin-top: 60px;
+    margin-left: 20px;
+}
+
+.promo .promo-tag{
+    color: #aaa;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.promo .promo-place{
+    color: #0b2343;
+    font-weight: 300;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.promo .promo-place span{
+    font-weight: 400;
+}
+
+.promo .promo-price{
+    color: #aaa;
+    font-weight: 300;
+    margin-top: 8px;
+}
+
+.promo .line{
+    width: 100px;
+    height: 1px;
+    display: block;
+    background-color: #ccc;
+    margin-top: 60px;
+}
+
+/* RGIHT */
+
+#right{
+    width: 62.5%;
+    float: right;
+    background-color: #004990;
+    box-sizing: border-box;
+}
+
+#right img{
+    max-width: 100%;
+}
+
+.trip{
+    color: white;
+    padding: 20px 20px 100px 20px;
+}
+
+.trip .trip-title{
+    font-size: 36px;
+    margin: 25px 0 20px;
+    margin-left: 4%;
+    max-width: 70%;
+}
+
+.trip .trip-city{
+    font-size: 16px;
+    margin-left: 4%;
+    margin-top: 40px;
+    font-weight: 300;
+}
+
+.trip .trip-price{
+    font-size: 16px;
+    margin-left: 4%;
+    margin-top: 0px;
+    font-weight: 300;
+}
+
+.trip .trip-price span{
+    font-size: 44px;
+}
+
+.trip .trip-button{
+    display: inline-block;
+    margin: 30px 0 80px 4%;
+    background-color: rgba(0,0,0,0);
+    max-width: 300px;
+    min-width: 145px;
+    white-space: nowrap;
+    border: 1px solid #e5e5e5;
+    border-radius: 40px;
+    color: white;
+    font-size: 14px;
+    line-height: 1;
+    min-height: 61px;
+    padding: 22px 40px 23px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 20px;
+    font-size: 12px;
+    min-height: 43px;
+    padding: 14px 30px 15px;
+}
+
+.trip .trip-specs{
+    margin-left: 4%;
+    font-size: 12px;
+    font-weight: 300;
+    opacity: 0.5;
+}
+
+.blue{
+    background-color: #004990;
+}
+
+.green{
+    background-color: #48a83e;
+}
+
+.red{
+    background-color: #e91b2f;
+}
+
+@media screen and (max-width: 1100px) {
+    header ul.menu-1 {
+        display: none;
+    }
+
+    header ul.menu-2 {
+        display: none;
+    }
+
+    header .flag {
+        display: none;
+    }
+
+    header #menu {
+        display: block;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

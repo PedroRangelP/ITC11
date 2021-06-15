@@ -1,0 +1,195 @@
+<!--HTML basic-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<!--<img>-->
+<img src="smiley.gif" alt="Smiley face" height="42" width="42">
+
+<!--Hyperlinks-->
+<a href="http://www.w3schools.com">Visit W3Schools.com!</a> 
+
+<!--Target-->
+<a href="http://www.w3schools.com" target="_blank">Visit W3Schools.com!</a> <!--Load in a new window-->
+<a href="http://www.w3schools.com" target="_self">Visit W3Schools.com!</a> <!--Load in the same frame as it was clicked-->
+<a href="http://www.w3schools.com" target="_parent">Visit W3Schools.com!</a> <!--Load in the parent frameset-->
+<a href="http://www.w3schools.com" target="_top">Visit W3Schools.com!</a> <!--Load in the full body of the window-->
+<a href="http://www.w3schools.com" target="framename">Visit W3Schools.com!</a> <!--Load in a named frame-->
+
+<!--Telephone links-->
+<a href="tel:+525554832020"></a>
+
+<!--SMS-->
+<a href="sms:+5215522206862&body=Hi from HTML!"></a>
+
+<!--Skype-->
+<a href="skype:usrname?chat"></a>
+
+<!--Mail-->
+<a href="mailto:nobody@wordpress.com?subject=Testing mailto&body=A link that creates an email"></a>
+
+<!--Lists-->
+<ul>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+</ul>
+
+<ol>                    <!--Type-->
+    <li>Coffee</li>     <!--type="1" - The list items will be numbered with numbers (default)-->
+    <li>Tea</li>        <!--type="A" - The list items will be numbered with uppercase letters-->
+    <li>Milk</li>       <!--type="a" - The list items will be numbered with lowercase letters-->
+</ol>                   <!--type="I" - The list items will be numbered with uppercase roman numbers-->
+                        <!--type="i" - The list items will be numbered with lowercase roman numbers-->
+
+<!--Tables-->
+<table>
+    <tr> <!--Row-->
+        <td>Jill</td> <!--Column-->
+        <td>Smith</td>
+        <td>50</td>
+    </tr>
+    <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+    </tr>
+</table>
+
+<!--Forms-->
+<input type="text" placeholder="username" required> <!--Text-->
+
+<input type="password" placeholder="password"> <!--Password-->
+
+<select id="program"> <!--Select-->
+    <option value="LCMD">LCMD</option>
+    <option value="ITC">ITC</option>
+    <option value="LEM">LEM</option>
+    <option value="IIS">IIS</option>
+    <option value="LEC">LEC</option>
+</select>
+
+<input name="g" type="radio">M <!--Radio-->
+<input name="g" type="radio">F
+
+<input type="checkbox">BUS <!--Checkbox-->
+<input disabled type="checkbox">Car
+<input type="checkbox">Cab
+<input type="checkbox">Subway
+<input checked type="checkbox">Walk
+<input type="checkbox">Bike
+
+<textarea placeholder="type in your comments..."></textarea> <!--Comments-->
+
+<input type="button" value="SEND"> <!--Button-->
+
+<!--Forms - new elements-->
+<input type="date"> <!--Date-->
+
+<input type="color"> <!--Color-->
+
+<input min="1" max="10" type="range" step="3"> <!--Range-->
+
+<input type="email" required size="50" maxlength="5"> <!--Email-->
+
+<input type="submit" value="SEND"> <!--Submit-->
+
+
+
+<!--CSS-->
+selector {
+    property: value;
+}
+
+<!--CSS Inline-->
+<p style="color: red">text</p>
+
+<!--CSS Internal-->
+<!DOCTYPE html>
+<head>
+    <title>CSS Example</title>
+    <style>
+        p {
+            color: red;
+        }
+
+        a {
+            color: blue;
+        }
+    </style>
+</head>
+
+<!--CSS External-->
+<!DOCTYPE html>
+<head>
+    <title>CSS Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+p {
+color: red;
+}
+
+a {
+color: blue;
+}
+
+<!--Refering and selecting elements-->
+p { <!--Using the tag name-->
+    color: red; /* This will make all paragraphs display a red font color */
+}
+
+.rojo{ <!--Refering to classes .class-->
+    color: red; /* This will change the font color of all elements with the class=“rojo” */
+}
+
+#menu{ <!--Refering to the id #id-->
+    border: 1px solid black; /*This displays a border just around the element with id = “menu” */
+}
+
+<!--CSS Selectors-->
+.class <!--.intro - Selects all elements with class="intro"-->
+#id <!--#firstname - Selects the element with id="firstname" -->
+* <!--* - Selects all elements-->
+element <!--p - Selects all <p> elements-->
+element, element <!--div, p - Selects all <div> elements and all <p> elements-->
+element element <!--div p - Selects all <p> elements inside <div> elements-->
+element>element <!--div > p - Selects all <p> elements where the parent is a <div> element-->
+element+element <!--div + p - Selects all <p> elements that are placed inmmediately after <div> elements-->
+element1~elment2<!--ul ~ p - Selects every <ul> element that are preceded by a <p> element-->
+
+<!--Pseudo-elements-->
+selector::pseudo-element {
+    property: value;
+}
+
+::after <!--p::after - Insert something after the content of each <p> element-->
+::before <!--p::before - Insert something before the content of each <p> element-->
+::first-letter <!--p::first-letter - Selects the first letter of each <p> element-->
+::first-line <!--p::first-line - Selects the first line of each <p> element-->
+::selection <!--p::selection - Selects the portion of an element that is selected by the user-->
+
+<!--Pseudo-classes-->
+:active
+:checked
+:disabled
+:empty
+:first-child
+:first-of-type
+:hover
+:last-child
+:last-of-type
+:nth-child(n)
+
+<!--Position-->
+Absolute <!--The element is positioned relative to its first positioned (not static) ancestor element-->
+Relative <!--The element is positioned relative to its normal position, so "left:20" adds 20 pixels to the element's LEFT position-->
+Fixed <!--The element is positioned relative to the browser window-->
+Static <!--Default value. Elements render in order, as they appear in the document flow-->

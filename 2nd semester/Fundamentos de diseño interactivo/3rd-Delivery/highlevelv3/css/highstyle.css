@@ -1,0 +1,564 @@
+body {
+    margin: 0;
+    font-family: 'Comfortaa', cursive;
+}
+
+body .screen {
+    width: 100%;
+    height: 100vh;
+}
+body .main-title {
+    font-size: 20vw;
+    color: #ffffff;
+    margin: 0;
+    padding-top: 20%;
+}
+body .error-msm {
+    width: 90%;
+    background-color: #ffffff00;
+    font-size: 5vw;
+    text-align: center;
+    color: #C0392B;
+    display: none;
+}
+body .btn{
+    width: 60%;
+    border-radius: 20px;
+    background-color: #005377;
+    color: #ffffff;
+    margin-top: 15%;
+    text-align: center;
+    padding: 5% 0;
+    font-size: 6vw;
+    cursor: pointer;
+}
+body .input {
+    width: 80%;
+    border: solid 3px #ffffff;
+    border-radius: 20px;
+    background-color: #ffffff00;
+    margin-top: 4%;
+    padding: 2% 10px;
+    font-family: inherit;
+    font-size: 4vw; 
+    color: #ffffff;
+}
+body .input::placeholder {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #ffffff;
+}
+body .back-btn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    z-index: 1;
+    padding: 5px;
+    cursor: pointer;
+    background-color: #ffffffBF;
+    border-radius: 100%;
+}
+body .back-btn img{
+    width: 16vw;
+    height: 16vw;
+}
+body .reg-page {
+    top: 5px;
+    left: 5px;
+    width: 16vw;
+    height: 16vw;
+}
+body .delete{
+    color: #ffffff;
+    background-color: #C0392B;
+    padding: 10px;
+    font-size: 3vw;
+    border-radius: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+
+/********************/
+/*     Slide 1      */
+/********************/
+
+body #slide-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("wallpaper.png");
+    background-position: 769px;
+}
+
+
+/********************/
+/*     Slide 2      */
+/********************/
+
+body #slide-2 {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("wallpaper.png");
+    background-position: 769px;
+}
+
+
+/********************/
+/*     Slide 3      */
+/********************/
+
+body #slide-3 {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("wallpaper.png");
+    background-position: 769px;
+}
+
+
+/********************/
+/*    Menu Left     */
+/********************/
+
+body .menu-left{
+    position: absolute;
+    z-index: 10;
+    width: 40%;
+    height: 80vh;
+    background-color: #005377E6;
+    color: #ffffff;
+    display: none;
+    border-radius: 0 0 20px 0;
+}
+body .menu-left #user-cont{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body .menu-left #user-cont img{
+    margin-top: 20%;
+    width: 60%;
+}
+body .menu-left #user-cont #username{
+    font-size: 6vw;
+    color: #BFC9CA;
+}
+body .menu-left .item{
+    font-size: 4vw;
+    margin-top: 20%;
+    margin-left: 15px;
+    cursor: pointer;
+}
+body .menu-left .logout-btn{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+}
+body .menu-left .logout-btn h3{
+    margin: 0;
+    color: #C0392B;
+}
+body .menu-left .logout-btn img{
+    width: 8vw;
+    height: 8vw;
+    margin-left: 15px;
+}
+
+
+/********************/
+/*     Header       */
+/********************/
+
+body .header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #CBD1DB;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+body .header .screentitle{
+    width: 100%;
+    margin: 0;
+    color: #140D4F;
+    text-align: center;
+    font-size: 8vw;
+}
+body .header img{
+    width: 9vw;
+    height: 9vw;
+    margin-right: 15px;
+    cursor: pointer;
+}
+body .content{
+    width: 100%;
+    margin: 0;
+    margin-bottom: 21vw;
+}
+
+
+/********************/
+/*     Slide 4      */
+/********************/
+
+body #slide-4{
+    overflow: scroll;
+    display: none;
+}
+body #slide-4 .place-container{
+    width: 100%;
+}
+body #slide-4 #work-cont{
+    margin-top: 50px;
+}
+body #slide-4 .place-container .place-status{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: solid 4px #140D4F;
+}
+body #slide-4 .place-container .place-status h2{
+    font-size: 5.5vw;
+    margin: 0;
+    padding-left: 20px;
+}
+body #slide-4 .place-container .place-icon{
+    width: 11vw;
+    height: 11vw;
+}
+body #slide-4 .place-container .knocki-maincont{
+    width: 90%;
+    background-color: #CBD1DB;
+    display: none;
+    align-items: center;
+    margin: 5px auto;
+    border-radius: 20px;
+    padding: 5px;
+    cursor: pointer;
+}
+body #slide-4 .place-container .knocki-maincont img{
+    width: 20vw;
+    height: 20vw;
+}
+body #slide-4 .place-container .knocki-lbls{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+body #slide-4 .place-container .knocki-lbls h3{
+    margin: 0;
+    padding: 5px 0;
+    font-size: 4vw;
+}
+body #slide-4 .place-container .knocki-lbls #mainName-lbl{
+    color: #140D4F;
+}
+body #slide-4 .place-container .knocki-lbls #mainRoom-lbl {
+    color: #005377;
+}
+body #slide-4 .plusadd-btn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    z-index: 1;
+    padding: 5px;
+    cursor: pointer;
+    background-color: #ffffffBF;
+    border-radius: 40px;
+}
+body #slide-4 .plusadd-btn h3{
+    font-size: 4vw;
+    color: #604c8d;
+}
+body #slide-4 .plusadd-btn img{
+    width: 16vw;
+    height: 16vw;
+    margin-left: 15px;
+}
+
+
+/********************/
+/*     Slide 5      */
+/********************/
+
+body #slide-5 {
+    overflow: scroll;
+    display: none;
+}
+body #slide-5 .content .addinput-cont{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    align-content: center;
+    padding: 15px;
+}
+body #slide-5 .addinput-cont h3{
+    font-size: 4vw;
+    margin: 0;
+    padding-right: 20px;
+}
+body #slide-5 .addinput-cont .addinput{
+    width: 100%;
+    color: #000000;
+    background-color: #8FB8DE;
+    border-radius: 20px;
+    font-family: inherit;
+    font-size: 3vw;
+    padding: 5px;
+}
+body #slide-5 .addinput::placeholder{
+    color: #140D4F;
+}
+body #slide-5 .content h2{
+    font-size: 5vw;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: #604c8d;
+}
+body #slide-5 .knocki-search{
+    width: 100%;
+    margin: 0;
+}
+body #slide-5 .knocki-result {
+    width: 75%;
+    background-color: #C7ADA7;
+    margin: auto;
+    border-radius: 20px;
+    display: none;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+body #slide-5 .knocki-result img {
+    width: 15vw;
+    height: 15vw;
+}
+body #slide-5 .knocki-result h4{
+    font-size: 4vw;
+    margin: 0;
+    margin-left: 10px;
+}
+body #slide-5 .knocki-result .addbtn-container{
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+body #slide-5 .knocki-result .addknocki-btn{
+    margin: 0;
+    color: #ffffff;
+    background-color: #604c8d;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 2.5vw;
+    cursor: pointer;
+}
+
+
+/********************/
+/*     Slide 6      */
+/********************/
+
+body #slide-6 {
+    overflow: scroll;
+    display: none;
+}
+body #slide-6 .summary-cont{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+body #slide-6 .summary-cont h3{
+    margin: 0;
+    font-size: 5vw;
+    padding: 10px;
+}
+body #slide-6 .summary-cont #knockiname-lbl, #knockiid-lbl{
+    color: #005377;
+}
+body #slide-6 .summary-cont .switch-cont{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+body #slide-6 .summary-cont .switch-cont img{
+    height: 5vh;
+    margin-right: 10px;
+    cursor: pointer;
+}body #slide-6 .content h2{
+    margin: 30px 0 15px 0;
+    font-size: 7.5vw;
+    padding: 10px;
+    border-top: solid 4px #140D4F;
+    border-bottom: solid 4px #140D4F;
+    color: #140D4F;
+}
+body #slide-6 .content .plusgesture-btn{
+    margin: 0;
+    cursor: pointer;
+    justify-content: space-around;
+}
+body #slide-6 .content .plusgesture-btn h4{
+    margin: 0;
+    font-size: 5.5vw;
+    color: #604c8d;
+}
+body #slide-6 .content .plusgesture-btn img {
+    height: 7vh;
+}
+body #slide-6 .content .gesture-cont{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 15px 0;
+}
+body #slide-6 .content .gesture-cont h5{
+    margin: 0;
+    font-size: 4vw;
+}
+body #slide-6 .content .gesture-cont .gestdel-cont{
+    display: flex;
+    align-items: center;
+}
+/*Delete gesture btn (remove next lines to show)*/
+body #slide-6 .content .gesture-cont .deletegest-btn{
+    display: none;
+}
+
+
+/********************/
+/*     Slide 7      */
+/********************/
+
+body #slide-7{
+    display: none;
+    overflow: scroll;
+}
+body #slide-7 #taparea{
+    background-color: #C7ADA7;
+    width: 70vw;
+    height: 70vw;
+    margin: 15px auto;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+body #slide-7 #taparea img{
+    height: 40vw;
+    width: 40vw;
+}
+body #slide-7 #taparea h3{
+    margin: 0;
+    font-size: 5vw;
+    color: #604c8d;
+}
+body #slide-7 #gesture{
+    width: 80%;
+    height: 10vw;
+    margin: auto;
+    text-align: center;
+    font-size: 8vw;
+    padding: 15px 0;
+    border-radius: 20px;
+    border: solid 6px #005377;
+}
+body #slide-7 .content .addaction-cont{
+    width: 70%;
+    margin: 30px auto;
+    display: flex;
+    align-content: center;
+    padding: 15px;
+}
+body #slide-7 .addaction-cont h3{
+    font-size: 4vw;
+    margin: 0;
+    padding-right: 20px;
+}
+body #slide-7 .addaction-cont .addinput{
+    width: 100%;
+    color: #000000;
+    background-color: #8FB8DE;
+    border-radius: 20px;
+    font-family: inherit;
+    font-size: 3vw;
+    padding: 5px;
+}
+body #slide-7 .content .gestbtn-cont{
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    color: #ffffff;
+}
+body #slide-7 .content .gestbtn-cont div{
+    width: 30%;
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+    color: #ffffff;
+    border-radius: 10px;
+    font-size: 4vw;
+}
+body #slide-7 .content .gestbtn-cont #reset-btn{
+    background-color: #C0392B;
+}
+body #slide-7 .content .gestbtn-cont .addgest-btn{
+    background-color: #005377;
+}
+
+/********************/
+/*     Slide 8      */
+/********************/
+
+body #slide-8 {
+    display: none;
+    background-image: url("wallpaper.png");
+    background-position: 769px;
+}
+body #slide-8 .content img{
+    height: 30vw;
+    margin: 20vw 35vw 10vw 35vw;
+}
+body #slide-8 .content .acc-text{
+    margin: 0;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 10vw;
+}
+body #slide-8 .content h1{
+    font-size: 8vw;
+}
+body #slide-8 .content h2{
+    font-size: 6vw;
+}
+body #slide-8 .content h3{
+    font-size: 6vw;
+}
+
+
+

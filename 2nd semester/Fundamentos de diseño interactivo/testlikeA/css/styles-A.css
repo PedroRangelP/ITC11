@@ -1,0 +1,205 @@
+/* CSS RESET */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* My styles */
+
+
+body{
+    background-color: #e3e3e3;
+    font-family: 'Krub', sans-serif;
+}
+
+header, .car-container, .color-selection, h1{
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    position: relative;
+}
+
+header img{
+    max-width: 120px;
+}
+
+header ul{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    display: block;
+}
+
+header ul li{
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 20px;
+    color: #999;
+}
+
+header ul li:hover{
+    color: #333;
+    cursor: pointer;
+}
+
+header .mobile-menu{
+    position: absolute;
+    width: 50px;
+    right: 10px;
+    top: 20px;
+    opacity: 0;
+}
+
+h1{
+    text-align: center;
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+h1 span{
+    transition: 1s;
+    color: #d93341;
+}
+
+.car-container{
+    width: 100%;
+    height: 576px;
+    z-index: 1;
+}
+
+.car-container img{
+    opacity: 0;
+    transition: 1s;
+    position: absolute;
+    top: 0;
+}
+
+.car-container .car-red{
+    opacity: 1;
+}
+
+.color-selection ul{
+    text-align: center;
+}
+
+.color-selection ul li{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin: 20px;
+    border-radius: 50%;
+    opacity: 0.3;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: 0.2s;
+    position: relative;
+}
+
+.color-selection ul li p{
+    position: absolute;
+    top: 60px;
+    opacity: 0;
+    transition: 0.2s;
+    color: #666;
+    text-align: center;
+    width: 100%;
+}
+
+.color-selection ul li.green { background-color: #25d94c; }
+.color-selection ul li.pink { background-color: #da2cac; }
+.color-selection ul li.red { background-color: #d93341; }
+.color-selection ul li.yellow { background-color: #dcbb20; }
+.color-selection ul li.metalic-green { background-color: #3cd4c9; }
+
+.color-selection ul li:hover {
+    opacity: 1;
+    border: 2px solid black;
+}
+
+.color-selection ul li:hover p {
+    opacity: 1;
+}
+
+
+@media screen and (max-width: 1024px) {
+    header ul {
+        top: 120%;
+        z-index: 1;
+        background: #e3e3e3;
+    }
+
+    header ul li {
+        display: block;
+        font-size: 14px;
+        margin-left: 20px;
+        color: #999;
+        padding: 5px;
+    }
+
+    header ul li:hover {
+        color: #333;
+        cursor: pointer;
+    }
+
+    header .mobile-menu {
+        opacity: 5;
+    }
+
+    .car-container {
+        width: 100%;
+        height: 60vw;
+    }
+
+    .car-container img {
+        width: 100%;
+    }
+    
+
+}
