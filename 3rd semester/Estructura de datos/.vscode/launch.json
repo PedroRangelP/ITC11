@@ -1,0 +1,31 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Aplicacion",
+            "request": "launch",
+            "mainClass": "aplicacion.Aplicacion",
+            "projectName": "Estudiantes"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - InterfazEstudiante",
+            "request": "launch",
+            "mainClass": "InterfazEstudiante",
+            "projectName": "Estudiantes"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "Main"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Algoritmos de ordenamiento"
+        }
+    ]
+}

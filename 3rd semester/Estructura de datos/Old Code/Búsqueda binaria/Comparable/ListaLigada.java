@@ -1,0 +1,168 @@
+public class ListaLigada<T extends Comparable<T>> {
+    private Nodo<T> inicial;
+
+
+    public Nodo<T> getInicial() {
+        return inicial;
+    }
+
+    public void setInicial(Nodo<T> inicial) {
+        this.inicial = inicial;
+    }
+
+    public boolean estaVacia() {
+        return inicial==null;
+    }
+
+    public void insertarAlInicio(T elemento) {
+        Nodo<T> aInsertar = new Nodo<>(elemento);
+        aInsertar.setSiguiente(inicial);
+        inicial = aInsertar;
+    }
+
+    public void insertarAlUltimo(T elemento) {
+        if(estaVacia()) {
+            insertarAlInicio(elemento);
+        }else {
+            Nodo<T> temp=inicial;
+            while(temp.getSiguiente()!=null) {
+                temp=temp.getSiguiente();
+            }
+            temp.setSiguiente(new Nodo<T>(elemento));
+        }
+    }
+
+    public int contarElementos() {
+        if(estaVacia()) {
+            return 0;
+        }else {
+            Nodo<T> temp=inicial;
+            int contador=0;
+            while(temp!=null) {
+                contador ++;
+                temp=temp.getSiguiente();
+            }
+            return contador;
+        }
+    }
+
+    public void quitarElPrimero() {
+        if(estaVacia()) {
+            System.out.println("No puedes quitar elementos");
+        }else {
+            inicial=inicial.getSiguiente();
+        }
+    }
+
+    public void quitarAlFinal() {
+        if(estaVacia()) {
+            System.out.println("No puedes quitar elementos");
+        }else {
+            Nodo<T> temp=inicial;
+            while(temp.getSiguiente().getSiguiente()!=null) {
+                temp=temp.getSiguiente();
+            }
+            temp.setSiguiente(null);
+        }
+    }
+
+    public void quitarAlFinalIndice() {
+        if (contarElementos() == 0) {
+            System.out.println("No puedes borrar");
+        } else if (contarElementos() == 1) {
+            quitarElPrimero();
+        } else {
+            Nodo<T> penultimo = encontrarNodoEnIndice(contarElementos() - 2);
+            penultimo.setSiguiente(null);
+        }
+    }
+
+    public Nodo<T> encontrarNodoEnIndice(int indice) {
+        if (indice < contarElementos()) {
+            Nodo<T> temp = inicial;
+            for (int i = 0; i < indice; i++) {
+                temp = temp.getSiguiente();
+            }
+            return temp;
+        } else {
+            System.out.println("Index out of bounds");
+            return null;
+        }
+    }
+
+    public T encontrarElementoEnElIndice(int indice) {
+        return encontrarNodoEnIndice(indice).getElemento();
+    }
+
+    public void insertarEnElIndice(int index, T elemento) {
+        if (estaVacia())
+            insertarAlInicio(elemento);
+        else {
+            if (index >= contarElementos()) {
+                System.out.println("No puedes insertar en ese indice");
+                return;
+            }
+            if (index == contarElementos() - 1) {
+                insertarAlUltimo(elemento);
+                return;
+            }
+            if (index == 0) {
+                insertarAlInicio(elemento);
+                return;
+            }
+            Nodo<T> anterior = encontrarNodoEnIndice(index - 1);
+            Nodo<T> aInsertar = new Nodo<>(elemento);
+            aInsertar.setSiguiente(anterior.getSiguiente());
+            anterior.setSiguiente(aInsertar);
+
+        }
+    }
+
+    public void imprimeLista() {
+        if(estaVacia()) {
+            System.out.println("Lista vacía");
+        }else {
+            Nodo<T> temp = inicial;
+            while(temp!=null) {
+                System.out.println("Nodo: "+temp.getElemento().toString());
+                temp=temp.getSiguiente();
+            }
+        }
+    }
+
+    public int busquedaLineal(T elemento) throws Exception{
+        Nodo<T> temp = inicial;
+        if (estaVacia()) {
+            throw new Exception("Lista vacía");
+        }
+        int indice=0;
+        while (temp!=null) {
+            if(temp.getElemento().compareTo(elemento)==0) {
+                return indice;
+            }else {
+                indice++;
+                temp=temp.getSiguiente();
+            }
+        }
+
+        throw new Exception("Elemento no encontrado");
+    }
+
+    public int busquedaBinaria(T elemento) {
+        int inicio=0;
+        int fin=contarElementos()-1;
+        while(inicio<=fin) {
+            int mitad=(inicio+fin)/2;
+            if(encontrarNodoEnIndice(mitad).compareTo(elemento)==0) {
+                return mitad;
+            }else {
+                if(encontrarElementoEnElIndice(mitad).compareTo(elemento)>0) {
+                    fin=mitad-1;
+                }else {
+                    inicio=mitad+1;
+                }
+            }
+        }
+        return -1;
+    }
+}
