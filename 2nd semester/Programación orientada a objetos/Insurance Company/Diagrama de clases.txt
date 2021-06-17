@@ -1,0 +1,62 @@
+---------------------
+Costumer
+---------------------
++ int ID
++ String name
++ int age
++ String adddress
++ String costumerType
+---------------------
+
+---------------------
+
+
+
+---------------
+PrivateCar
+---------------
++ String state
+---------------
+
+---------------
+
+
+
+---------------
+Motorcycle
+---------------
++ int seats
+---------------
+
+---------------
+
+
+
+-----------------------------------------
+InsuranceCompany
+-----------------------------------------
++ Costumer[] costumers
++ PrivateCar[] privateCars
++ Motorcycle[] motorcycle
++ TransportCar[] transportCars
+- int counterCostumers
+-----------------------------------------
++ void registerCostumer(Costumer c)
++ void updateCostumer(int ID, Costumer c)
++ void deleteCostumer(int ID)
++ Costumer getCostumer(int ID)
+
+-----------------------------------------
+
+
+
+-----------------------------------------
+Vehicle
+-----------------------------------------
++ int antiquity
++ String brand
++ String model
++ String plate
+-----------------------------------------
+
+-----------------------------------------

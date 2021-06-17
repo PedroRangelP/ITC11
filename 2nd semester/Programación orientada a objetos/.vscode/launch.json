@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MovieManager",
+            "request": "launch",
+            "mainClass": "MovieManager",
+            "projectName": "Programación orientada a objetos_2d9d2c3e"
+        }
+    ]
+}
