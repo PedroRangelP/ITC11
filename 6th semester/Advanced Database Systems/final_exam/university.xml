@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE UNIVERSITY [
+   <!ELEMENT UNIVERSITY (STU*, CUR*)>
+   <!ELEMENT STU (SNAME, PROG, CAMPUS, GRADE*)>
+   <!ATTLIST STU SID ID #REQUIRED>
+   <!ELEMENT SNAME (#PCDATA)>
+   <!ELEMENT PROG (#PCDATA)>
+   <!ELEMENT CAMPUS (#PCDATA)>
+   <!ELEMENT GRADE (#PCDATA)>
+   <!ATTLIST GRADE CID IDREF #REQUIRED>
+   <!ELEMENT CUR (CNAME, CREDITS)>
+   <!ATTLIST CUR CID ID #REQUIRED>
+   <!ELEMENT CNAME (#PCDATA)>
+   <!ELEMENT CREDITS (#PCDATA)>
+]>
+
+<UNIVERSITY>
+	<STU SID="S1">
+		<SNAME>Alan Turing</SNAME>
+		<PROG>ISC</PROG>
+		<CAMPUS>London</CAMPUS>
+		<GRADE CID="C1">90</GRADE>
+	</STU>
+	<STU SID="S2">
+		<SNAME>John Von Neumann</SNAME>
+		<PROG>ISC</PROG>
+		<CAMPUS>Budapest</CAMPUS>
+		<GRADE CID="C1">100</GRADE>
+		<GRADE CID="C2">100</GRADE>
+	</STU>
+	<STU SID="S3">
+		<SNAME>John Backus</SNAME>
+		<PROG>INT</PROG>
+		<CAMPUS>New York</CAMPUS>
+		<GRADE CID="C3">80</GRADE>
+		<GRADE CID="C4">90</GRADE>
+	</STU>
+	<STU SID="S4">
+		<SNAME>Noam Chomsky</SNAME>
+		<PROG>INT</PROG>
+		<CAMPUS>Boston</CAMPUS>
+		<GRADE CID="C2">100</GRADE>
+	</STU>
+	<STU SID="S5">
+		<SNAME>Esgert Dijkstra</SNAME>
+		<PROG>ISC</PROG>
+		<CAMPUS>Amsterdam</CAMPUS>
+	</STU>	
+	<CUR CID="C1">
+		<CNAME>Theory of computation</CNAME>
+		<CREDITS>8</CREDITS>
+	</CUR>
+	<CUR CID="C2">
+		<CNAME>Analysis of algorithms</CNAME>
+		<CREDITS>8</CREDITS>
+	</CUR>
+	<CUR CID="C3">
+		<CNAME>Advanced databases</CNAME>
+		<CREDITS>16</CREDITS>
+	</CUR>
+	<CUR CID="C4">
+		<CNAME>Computer organization</CNAME>
+		<CREDITS>8</CREDITS>
+	</CUR>
+	<CUR CID="C5">
+		<CNAME>Programming languages</CNAME>
+		<CREDITS>16</CREDITS>
+	</CUR>
+</UNIVERSITY>

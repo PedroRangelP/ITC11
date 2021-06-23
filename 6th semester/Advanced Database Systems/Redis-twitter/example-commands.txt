@@ -1,0 +1,23 @@
+node src/app.js register --username="user1" --password="123" --name="Richie"
+node src/app.js register --username="user2" --password="321" --name="Lalo"
+node src/app.js register --username="user3" --password="456" --name="Pedro"
+
+node src/app.js login --username="user1" --password="123"
+
+node src/app.js follow --username="user2"
+node src/app.js follow --username="user3"
+
+node src/app.js timeline
+
+node src/app.js logout
+
+
+-----------------------------
+
+node src/app.js login --username="user2" --password="321"
+node src/app.js tweet --body="Quedate con quien te ponga Buenos dias aunque sepa que te levantas a las 3:00 de la tarde"
+
+-----------------------------
+
+node src/app.js login --username="user3" --password="456"
+node src/app.js tweet --body="Les juro que en febrero si me pongo fit, enero fue el mes de prueba"

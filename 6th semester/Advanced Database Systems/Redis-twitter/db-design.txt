@@ -1,0 +1,11 @@
+//USER - HASH
+MSET <username> password "value" name "value"
+
+//FOLLOW - LIST
+LPUSH <loggedUserFollowing> <channelName>
+
+//TWEET - PUBLISH
+PUBLISH <channelName> "Body"
+
+//TIMELINE - SUBSCRIBE
+SUBSCRIBE <channelName>

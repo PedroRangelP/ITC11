@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE COMPANY SYSTEM "company.dtd">
+<COMPANY>
+	<ASG>
+		<EMP Eno='E01'>
+			<Ename>John Smith</Ename>
+			<Title>Sys. Admin</Title>
+			<Sal>10000</Sal>
+		</EMP>
+		<PROJECT Pno='P01'>
+			<Pname>Project X</Pname>
+			<Budget>500000</Budget>
+			<Loc>San Francisco</Loc>
+		</PROJECT>
+		<RESP>Manager</RESP>
+		<DUR>12</DUR>
+	</ASG>
+	
+	<ASG>
+		<EMP Eno='E01'>
+			<Ename>John Smith</Ename>
+			<Title>Sys. Admin</Title>
+			<Sal>10000</Sal>
+		</EMP>
+		<PROJECT Pno='P02'>
+			<Pname>Project Y</Pname>
+			<Budget>800000</Budget>
+			<Loc>San Francisco</Loc>
+		</PROJECT>
+		<RESP>Worker</RESP>
+		<DUR>6</DUR>
+	</ASG>
+	
+</COMPANY>

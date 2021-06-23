@@ -1,0 +1,15 @@
+<!ELEMENT pubs (pub*, costumer*)>
+<!ELEMENT pub (pname, area, beer*)>
+<!ATTLIST pub pid ID #REQUIRED>
+<!ELEMENT pname (#PCDATA)>
+<!ELEMENT area (#PCDATA)>
+<!ELEMENT beer (bname, color, country)>
+<!ATTLIST beer bid ID #REQUIRED price CDATA #REQUIRED>
+<!ELEMENT bname (#PCDATA)>
+<!ELEMENT color (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT costumer (cname, gender, age)>
+<!ATTLIST costumer cid ID #REQUIRED frequents IDREFS #IMPLIED likes IDREFS #IMPLIED>
+<!ELEMENT cname (#PCDATA)>
+<!ELEMENT gender (#PCDATA)>
+<!ELEMENT age (#PCDATA)>

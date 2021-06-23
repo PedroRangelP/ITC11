@@ -1,0 +1,26 @@
+[{
+  "_id": 1,
+  "name": "Andrea",
+  "phone_number": "55 6789 4556",
+  "address": "iztapalapa"
+},{
+  "_id": 2,
+  "name": "Fernando",
+  "phone_number": "55 6469 9834",
+  "address": "Coyoacan"
+},{
+  "_id": 3,
+  "name": "Rodrigo",
+  "phone_number": "55 5698 9845",
+  "address": "Benito Juárez"
+},{
+  "_id": 4,
+  "name": "Jorge",
+  "phone_number": "55 1937 7204",
+  "address": "Doctores"
+},{
+  "_id": 5,
+  "name": "Gerardo",
+  "phone_number": "55 0285 8294",
+  "address": "Lomas Estrella"
+}]

@@ -1,0 +1,56 @@
+[{
+  "_id": 1,
+  "date": {
+    "$date": "2020-01-13T00:00:00Z"
+  },
+  "vehicle_type": "Ferrari",
+  "plate_number": "jwe-044",
+  "total_amount": 2500000,
+  "monthly_payments": 1,
+  "seller": "Pedro",
+  "owner_id": 1
+},{
+  "_id": 2,
+  "date": {
+    "$date": "2020-08-26T00:00:00Z"
+  },
+  "vehicle_type": "BMW",
+  "plate_number": "ezs-604",
+  "total_amount": 500000,
+  "monthly_payments": 2,
+  "seller": "Pedro",
+  "owner_id": 2
+},{
+  "_id": 3,
+  "date": {
+    "$date": "2020-03-15T00:00:00Z"
+  },
+  "vehicle_type": "Tsuru",
+  "plate_number": "owo-101",
+  "total_amount": 65000,
+  "monthly_payments": 1,
+  "seller": "Richie",
+  "owner_id": 3
+},{
+  "_id": 4,
+  "date": {
+    "$date": "2020-12-01T00:00:00Z"
+  },
+  "vehicle_type": "Lamborghini",
+  "plate_number": "ggz-784",
+  "total_amount": 6930000,
+  "monthly_payments": 2,
+  "seller": "Eduardo",
+  "owner_id": 4
+},{
+  "_id": 5,
+  "date": {
+    "$date": "2021-07-12T00:00:00Z"
+  },
+  "vehicle_type": "Audi R8",
+  "plate_number": "xdf-368",
+  "total_amount": 3470000,
+  "monthly_payments": 1,
+  "seller": "Eduardo",
+  "owner_id": 5
+}]
