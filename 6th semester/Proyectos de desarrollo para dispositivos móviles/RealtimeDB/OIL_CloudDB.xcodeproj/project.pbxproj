@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		354442A722510A54001FF572 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354442A622510A54001FF572 /* AppDelegate.swift */; };
+		354442A922510A54001FF572 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354442A822510A54001FF572 /* ViewController.swift */; };
+		354442AC22510A54001FF572 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 354442AA22510A54001FF572 /* Main.storyboard */; };
+		354442AE22510A55001FF572 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 354442AD22510A55001FF572 /* Assets.xcassets */; };
+		354442B122510A55001FF572 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 354442AF22510A55001FF572 /* LaunchScreen.storyboard */; };
+		354442B922510A9C001FF572 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 354442B822510A9C001FF572 /* GoogleService-Info.plist */; };
+		3572E6772251A7DB0016C9FC /* DetalleRegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3572E6762251A7DB0016C9FC /* DetalleRegistroViewController.swift */; };
+		ADBD121D5FF738628A86794F /* Pods_OIL_CloudDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E42EDED2CD75D298D7166C /* Pods_OIL_CloudDB.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		354442A322510A54001FF572 /* OIL_CloudDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OIL_CloudDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		354442A622510A54001FF572 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		354442A822510A54001FF572 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		354442AB22510A54001FF572 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		354442AD22510A55001FF572 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		354442B022510A55001FF572 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		354442B222510A55001FF572 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		354442B822510A9C001FF572 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3572E6762251A7DB0016C9FC /* DetalleRegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleRegistroViewController.swift; sourceTree = "<group>"; };
+		5ED8C018057D0F5BFDE2DF87 /* Pods-OIL_CloudDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OIL_CloudDB.release.xcconfig"; path = "Pods/Target Support Files/Pods-OIL_CloudDB/Pods-OIL_CloudDB.release.xcconfig"; sourceTree = "<group>"; };
+		88E42EDED2CD75D298D7166C /* Pods_OIL_CloudDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OIL_CloudDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD6684D218C8C266B028EE8B /* Pods-OIL_CloudDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OIL_CloudDB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OIL_CloudDB/Pods-OIL_CloudDB.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		354442A022510A54001FF572 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADBD121D5FF738628A86794F /* Pods_OIL_CloudDB.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3544429A22510A54001FF572 = {
+			isa = PBXGroup;
+			children = (
+				354442A522510A54001FF572 /* OIL_CloudDB */,
+				354442A422510A54001FF572 /* Products */,
+				DF6D53EF606D011ACE456CFE /* Pods */,
+				526F472573B9F4A4C86B2D7E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		354442A422510A54001FF572 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				354442A322510A54001FF572 /* OIL_CloudDB.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		354442A522510A54001FF572 /* OIL_CloudDB */ = {
+			isa = PBXGroup;
+			children = (
+				354442B822510A9C001FF572 /* GoogleService-Info.plist */,
+				354442A622510A54001FF572 /* AppDelegate.swift */,
+				354442A822510A54001FF572 /* ViewController.swift */,
+				354442AA22510A54001FF572 /* Main.storyboard */,
+				354442AD22510A55001FF572 /* Assets.xcassets */,
+				354442AF22510A55001FF572 /* LaunchScreen.storyboard */,
+				354442B222510A55001FF572 /* Info.plist */,
+				3572E6762251A7DB0016C9FC /* DetalleRegistroViewController.swift */,
+			);
+			path = OIL_CloudDB;
+			sourceTree = "<group>";
+		};
+		526F472573B9F4A4C86B2D7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88E42EDED2CD75D298D7166C /* Pods_OIL_CloudDB.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF6D53EF606D011ACE456CFE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CD6684D218C8C266B028EE8B /* Pods-OIL_CloudDB.debug.xcconfig */,
+				5ED8C018057D0F5BFDE2DF87 /* Pods-OIL_CloudDB.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		354442A222510A54001FF572 /* OIL_CloudDB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 354442B522510A55001FF572 /* Build configuration list for PBXNativeTarget "OIL_CloudDB" */;
+			buildPhases = (
+				E74EF50B07B3055A8E0B5603 /* [CP] Check Pods Manifest.lock */,
+				3544429F22510A54001FF572 /* Sources */,
+				354442A022510A54001FF572 /* Frameworks */,
+				354442A122510A54001FF572 /* Resources */,
+				23639B7132B4BC19220A66B0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OIL_CloudDB;
+			productName = OIL_CloudDB;
+			productReference = 354442A322510A54001FF572 /* OIL_CloudDB.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3544429B22510A54001FF572 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Tec de Monterrey";
+				TargetAttributes = {
+					354442A222510A54001FF572 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 3544429E22510A54001FF572 /* Build configuration list for PBXProject "OIL_CloudDB" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3544429A22510A54001FF572;
+			productRefGroup = 354442A422510A54001FF572 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				354442A222510A54001FF572 /* OIL_CloudDB */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		354442A122510A54001FF572 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				354442B122510A55001FF572 /* LaunchScreen.storyboard in Resources */,
+				354442B922510A9C001FF572 /* GoogleService-Info.plist in Resources */,
+				354442AE22510A55001FF572 /* Assets.xcassets in Resources */,
+				354442AC22510A54001FF572 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23639B7132B4BC19220A66B0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OIL_CloudDB/Pods-OIL_CloudDB-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OIL_CloudDB/Pods-OIL_CloudDB-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OIL_CloudDB/Pods-OIL_CloudDB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E74EF50B07B3055A8E0B5603 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OIL_CloudDB-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3544429F22510A54001FF572 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				354442A922510A54001FF572 /* ViewController.swift in Sources */,
+				354442A722510A54001FF572 /* AppDelegate.swift in Sources */,
+				3572E6772251A7DB0016C9FC /* DetalleRegistroViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		354442AA22510A54001FF572 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				354442AB22510A54001FF572 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		354442AF22510A55001FF572 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				354442B022510A55001FF572 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		354442B322510A55001FF572 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		354442B422510A55001FF572 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		354442B622510A55001FF572 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD6684D218C8C266B028EE8B /* Pods-OIL_CloudDB.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DAFU744LYN;
+				INFOPLIST_FILE = OIL_CloudDB/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mx.martinmolina.OIL-CloudDB";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		354442B722510A55001FF572 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5ED8C018057D0F5BFDE2DF87 /* Pods-OIL_CloudDB.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DAFU744LYN;
+				INFOPLIST_FILE = OIL_CloudDB/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mx.martinmolina.OIL-CloudDB";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3544429E22510A54001FF572 /* Build configuration list for PBXProject "OIL_CloudDB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				354442B322510A55001FF572 /* Debug */,
+				354442B422510A55001FF572 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		354442B522510A55001FF572 /* Build configuration list for PBXNativeTarget "OIL_CloudDB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				354442B622510A55001FF572 /* Debug */,
+				354442B722510A55001FF572 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3544429B22510A54001FF572 /* Project object */;
+}

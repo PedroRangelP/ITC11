@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="fotosS4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bL-8m-jPb">
+                                <rect key="frame" x="48" y="318.5" width="53" height="30"/>
+                                <state key="normal" title="Cámara"/>
+                                <connections>
+                                    <action selector="camara" destination="BYZ-38-t0r" eventType="touchUpInside" id="47c-kw-8eS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5P-SN-SXM">
+                                <rect key="frame" x="49" y="366.5" width="44" height="30"/>
+                                <state key="normal" title="Álbum"/>
+                                <connections>
+                                    <action selector="album" destination="BYZ-38-t0r" eventType="touchUpInside" id="8zO-2G-TPc"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ePV-bE-4f1">
+                                <rect key="frame" x="16" y="0.0" width="343" height="310.5"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WqF-iJ-KLM">
+                                <rect key="frame" x="123.5" y="505" width="128" height="30"/>
+                                <state key="normal" title="¿Qué es esta foto?"/>
+                                <connections>
+                                    <action selector="ejecutarML" destination="BYZ-38-t0r" eventType="touchUpInside" id="R1d-jD-XlC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dr-sV-W9f">
+                                <rect key="frame" x="237" y="318.5" width="56" height="30"/>
+                                <state key="normal" title="Guardar"/>
+                                <connections>
+                                    <action selector="guardarImagen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nTn-XD-gl8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identificacion" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7G-HL-U8Z">
+                                <rect key="frame" x="89" y="438" width="171" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ePV-bE-4f1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0ED-9B-llO"/>
+                            <constraint firstItem="ePV-bE-4f1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3Wg-kv-CdO"/>
+                            <constraint firstItem="x5P-SN-SXM" firstAttribute="top" secondItem="7bL-8m-jPb" secondAttribute="bottom" constant="18" id="4wk-b0-RLr"/>
+                            <constraint firstItem="x5P-SN-SXM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="49" id="7Ka-dd-zCB"/>
+                            <constraint firstItem="b7G-HL-U8Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="89" id="AwR-IQ-T4i"/>
+                            <constraint firstItem="WqF-iJ-KLM" firstAttribute="top" secondItem="b7G-HL-U8Z" secondAttribute="bottom" constant="46" id="IWW-Ib-rGB"/>
+                            <constraint firstItem="7bL-8m-jPb" firstAttribute="top" secondItem="ePV-bE-4f1" secondAttribute="bottom" constant="8" id="fTB-gb-f5t"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2dr-sV-W9f" secondAttribute="trailing" constant="82" id="g29-1L-q4w"/>
+                            <constraint firstItem="7bL-8m-jPb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="iqC-hM-8vV"/>
+                            <constraint firstItem="ePV-bE-4f1" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="mgc-Sd-ziU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b7G-HL-U8Z" secondAttribute="trailing" constant="115" id="rnU-Pb-0jk"/>
+                            <constraint firstItem="ePV-bE-4f1" firstAttribute="centerX" secondItem="WqF-iJ-KLM" secondAttribute="centerX" id="tNk-Mt-Mz3"/>
+                            <constraint firstItem="7bL-8m-jPb" firstAttribute="baseline" secondItem="2dr-sV-W9f" secondAttribute="baseline" id="tdK-wR-kCU"/>
+                            <constraint firstItem="7bL-8m-jPb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vsQ-oY-0al"/>
+                            <constraint firstItem="b7G-HL-U8Z" firstAttribute="top" secondItem="x5P-SN-SXM" secondAttribute="bottom" constant="41.5" id="y0S-Lq-ceZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="camaraBoton" destination="7bL-8m-jPb" id="U2t-kM-dC3"/>
+                        <outlet property="fotoVista" destination="ePV-bE-4f1" id="FHi-bv-WDV"/>
+                        <outlet property="identificacionImagen" destination="b7G-HL-U8Z" id="qL6-L5-NVb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
